@@ -6,7 +6,7 @@ import Form_login from '@/components/form-login'
 
 import axios from 'axios'
 
-function page() {
+function Login() {
 
   // const {emailousuario,password, onInputChange,onResetForm}=useForm({emailousuario:null,password:null})
   const [elements,setElementes]=useState({emailousuario:null,password:null})
@@ -39,4 +39,4 @@ function page() {
   )
 }
 
-export default page
+export default Login
