@@ -8,10 +8,10 @@ const Form_login = (props) => {
   return (
     <div className="container">
     <div className="element">
-      <Image src={img} className="registerImg"></Image>
+      <Image alt='register image' src={img} className="registerImg"></Image>
     </div>
     <div className="element">
-     <Form/>
+     <Form handleSubmit={props.handleSubmit} onInputChnage={props.onInputChnage}/>
     </div>
   </div>
   )

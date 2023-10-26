@@ -8,16 +8,16 @@ const Form = (props) => {
         <div className="containerForm">
         <h1 className="titulo">Inicia sesión.</h1>
         <div className="mover-input">
-          <input placeholder="Usuario/Correo" class="input-field" type="text"/>
-  <label for="input-field" class="input-label">Enter text</label>
-  <span class="input-highlight"></span>
+          <input placeholder="Usuario/Correo" onChange={props.onInputChnage} name="emailousuario" className="input-field" type="text"/>
+  <label htmlFor="input-field" className="input-label" >Enter text</label>
+  <span className="input-highlight"></span>
 
-  <input placeholder="Contraseña" class="input-field" type="text"/>
-  <label for="input-field" class="input-label">Enter text</label>
-  <span class="input-highlight"></span>
+  <input placeholder="Contraseña" name="password" onChange={props.onInputChnage} className="input-field" type="text"/>
+  <label htmlFor="input-field" className="input-label">Enter text</label>
+  <span className="input-highlight"></span>
             
         </div>
-          <button className="accept">Aceptar</button>
+          <button onClick={props.handleSubmit} className="accept">Aceptar</button>
         </div>
       <footer><a href="">Registrarse</a></footer>
       </div>
