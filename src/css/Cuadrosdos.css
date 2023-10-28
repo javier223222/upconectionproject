@@ -1,0 +1,53 @@
+.contenedor-abajo{
+width: 100%;
+height: 50vh;
+    display: flex;
+    flex-direction: row;
+align-items: end;
+background-color: black;
+}
+
+.cuadrodos{
+ 
+
+    background-color: #FDE0FF;
+    width: 70%;
+    height: 36vb;
+  margin-left: 5%;
+  
+}
+.cuadrotres{
+ 
+
+    background-color: #FDE0FF;
+    width: 30%;
+    height: 25vb;
+
+margin-right: 35%;
+}
+
+.cuadrocuatro{
+ 
+
+    background-color: #FDE0FF;
+    width: 20%;
+    height: 45vb;
+  margin-left: 5%;
+  
+}
+.contenedor-subuno{
+    width: 50%;
+    height: 50vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: end;
+}
+
+.contenedor-subdos{
+    width: 50%;
+    height: 50vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}

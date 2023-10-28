@@ -1,0 +1,16 @@
+.contenedor-arriba{
+width: 100%;
+height: 47vh;
+    display: flex;
+    justify-content: center;
+
+}
+
+.cuadro1{
+ 
+    
+    background-color: #FDE0FF;
+    width: 40%;
+    height: 40vb;
+  
+}
