@@ -1,0 +1,174 @@
+*{
+    background-color: white;
+    color: black;
+}
+
+.container{
+    align-items: center !important;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.form-container{
+box-sizing: border-box;
+width:  61.81818181818182vh;
+height: 75.8041958041958vh;
+background: #FFFFFF;
+border: 0.5px solid #434343;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 21px;
+}
+
+.registerImg{
+    width: 80vh;
+}
+
+/* Css RegisterForm */
+
+/* .titulo{
+    margin-top: 5vh;
+}
+
+.imputs{
+    margin-top: 10vh    ;
+}
+
+.containerForm{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+} */
+
+.titulo{
+    margin-top: 5vh;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: normal;
+}
+
+.imputs-uno {
+    margin-top: 5vh    ;
+    width: 45vh;
+    height: 4vh;
+
+}
+
+.imputs-dos {
+    margin-top: 5vh    ;
+    width: 45vh;
+    height: 4vh;
+
+}
+
+.containerForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mover-input{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15%;
+    
+}
+
+/* Input container */
+.input-container {
+    position: relative;
+    margin: 20px;
+  }
+  
+  /* Input field */
+  .input-field {
+    display: block;
+    margin: 5%;
+    width: 45vh;
+    height: 4vh;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    background-color: transparent;
+  }
+/* Input label */
+.input-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    color: rgba(204, 204, 204, 0);
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  
+  /* Input highlight */
+  .input-highlight {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #007bff;
+    transition: all 0.3s ease;
+  }
+  
+  /* Input field:focus styles */
+  .input-field:focus + .input-label {
+    top: -20px;
+    font-size: 12px;
+    color: #007bff;
+  }
+  .input-field:focus + .input-label + .input-highlight {
+    width: 100%;
+  }
+  
+
+  .accept{
+    margin-top: 10%;
+    width: 18vh;
+    height: 4vh;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    border: #000000b2 solid 0.5px;
+  }
+
+  .accept:active{
+    transform: scale(0.90);
+  }
+  .form-container footer{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    height: 18vh;
+  }
+
+  .form-container footer{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    height: 10vh;
+}
+
+.age{
+  display: block;
+  margin: 5%;
+  width: 45vh;
+  height: 4vh;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+}
+
+.sex{
+    display: block;
+  margin: 5%;
+  width: 45vh;
+  height: 4vh;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+}
