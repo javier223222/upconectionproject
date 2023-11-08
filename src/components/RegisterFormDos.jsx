@@ -8,36 +8,27 @@ const RegisterFormDos = (props) => {
 
       <div className="containerForm">
         <h1 className="titulo">Regístrate</h1>
+
         <div className="mover-input">
           <input placeholder="Usuario" class="input-field" type="text" />
-          <label for="input-field" class="input-label">
-            Enter text
-          </label>
-          <span class="input-highlight"></span>
-
           <input placeholder="Nombre" class="input-field" type="text" />
-          <label for="input-field" class="input-label">
-            Enter text
-          </label>
-          <span class="input-highlight"></span>
+          <input placeholder="Apellido P." className="apellidos" type="text" />
+          <input placeholder="Apellido M." className="apellidos" type="text" />
+          <input type="date" onchange="submitBday()" className="age" />
 
-          <input
-            id="fecha"
-            type="date"
-            onchange="submitBday()"
-            className="age"
-          />
           <select className="sex">
-          <option>Male</option>
-          <option>Female</option>
+            <option>Male</option>
+            <option>Female</option>
           </select>
 
+          <select name="Carrera" className="sex">
+            <option>Software</option>
+          </select>
         </div>
         <button onClick={props.handleChange} className="accept">
           Continuar
         </button>
       </div>
-
     </div>
   );
 };
