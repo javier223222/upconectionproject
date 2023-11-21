@@ -8,7 +8,9 @@ import axios from 'axios'
 import { useRouter } from 'next/navigation'
 
 function Login() {
+
  const navigate=useRouter()
+
   // const {emailousuario,password, onInputChange,onResetForm}=useForm({emailousuario:null,password:null})
   const [elements,setElementes]=useState({emailousuario:null,password:null})
   const onInputChange=(e)=>{
