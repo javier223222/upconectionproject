@@ -1,34 +1,338 @@
-.profilesection{
+:root{
+    --ig-elevated-separator: 219, 219, 219;
+    --ig-primary-background: 255, 255, 255;
+    --ig-primary-button: #5654A8;
+}
+
+
+.personaldatain{
+    display: flex;
+   
+    
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    gap: 4rem;
+
+    padding: 5px 12%;
+   
+}
+.imagescontainer{
+    width: 32%;
+    height: auto;
+}
+.containerexper{
+    display: flex;
+    
+}
+.interesname{
+    cursor: default;
+}
+.principalcontainer{
+    width: 100%;
+}
+.interestOrExperts{
+    display: flex;
+    padding: 5px 10%;
+    flex-wrap: wrap;
+}
+.imagecontainer{
+    position: static;
+    width: 50px;
+    height: 10px;
+    cursor: pointer;
+}
+.friendContainer{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: -22rem;
+    width: 29%;
+    border: 1px solid rgb(var(--ig-elevated-separator));
+    border-radius: 8px !important;
+    padding: 5px 2% ;
+
+    background-color: rgb(var(--ig-primary-background));
+    box-sizing: border-box;
+    
+    
+}
+.imagesContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: -20rem;
+    width: 100%;
+    height: auto;
+    border: 1px solid rgb(var(--ig-elevated-separator));
+    border-radius: 8px !important;
+    padding: 5px 2% ;
+
+    background-color: rgb(var(--ig-primary-background));
+    box-sizing: border-box;
+}
+.profileimagecontainer{
+    position: relative;
+    top: -3.4rem;
+    left: 1.5rem;
+
+
+}
+
+.profile{
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+   
+
+
+}
+.informationandProfileConta{
     width: 100%;
     display: flex;
-    gap: 3rem;
-
+    
 }
-.container-friends{
-    width: 18%;
-    background-color: black;
-    display: flex;
-    justify-content: start;
-    flex-direction: column;
 
+.PersonalDataInformation{
   
-    height: auto;
-    margin: 3rem ;
-    background-color: #fff;
-    border: 0.0625rem solid #dadce0;
-    border-radius: 0.3rem;
+   margin-top: 2rem;
+}
+
+.showfriends{
+  background-color: var(--ig-primary-button);
+  color: rgb(var(--ig-primary-background));
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  width: 70%;
+  height: 32px;
+  position: relative;
+  margin-left: 17%;
+}
+.friend{
+    display: flex;
+   
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 8px;
+}
+.anadir{
+    background-color: var(--ig-primary-button);
+    color: rgb(var(--ig-primary-background));
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 8px;
+    width: 20%;
+    height: 32px;
+  
+}
+.boxexpertOrinteresTitle{
+    text-align: start;
+    padding: 6px 3%;
 
 }
-.imagecontainer {
-    margin: 3rem;
-}
-.d-flex{
+.anadicontainer{
     display: flex;
+    align-items: end;
+    justify-content: end;
+    padding: 5px 7%;
+
 }
-.descriptionProfile{
+.majorandnummContainer{
+    display: flex;
+    gap: 2px;
+    height: 20px;
+  
+}
+.css-eiir0b{
+    height: 195px;
+    width: 100%;
+    background-color: #001489 !important;
+    color: #FFFFFF !important;
+}
+.PersonalDataInformation{
+    width: 50%;
+}
+.name{
+    display: flex;
+    gap: 4.5px;
+    position: relative;
+    top: -8.1rem;
+    left: 8.5rem;
+    
+    color: #3F3F3F !important;
+
+}
+.imagePort{
+    width: 100%  !important;
+    height: 195px !important;
+    object-fit: cover;
+    object-position: bottom;
+    border-radius: 6px;
+
+}
+.username{
+    position: relative;
+    top: -3.4rem;
+    left: 2.3rem;
+    color: #3F3F3F !important;
+
+
+
+}
+
+.description{
+   
+    
+}
+.boxexpertOrInteres {
+    border: 1px solid rgb(var(--ig-elevated-separator));
+    border-radius: 8px !important;
+
+    background-color: rgb(var(--ig-primary-background));
+    box-sizing: border-box;
+}
+
+
+/* allImagesProfile */
+.allImages{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  
+    padding: 5px 10%;
+    gap: 4px;
+}
+
+/* description */
+.descriptioContainer{
+    display: flex;
+
+   
+
+}
+.imageEditDescription{
+    width: 20px;
+    height: 10px;
+    cursor: pointer ;
+}
+
+.editbox{
+    border: 1px solid rgb(var(--ig-elevated-separator));
+    border-radius: 10px !important;
+    outline: none;
+    width: 20;
+    background-color: rgb(var(--ig-primary-background));
+    box-sizing: border-box;
+}
+.anadirdescr{
+    background-color: var(--ig-primary-button);
+    color: rgb(var(--ig-primary-background));
+    cursor: pointer;
+   
+    border: none;
+    border-radius: 8px;
+    
+  
+}
+
+/* hobbiees,expert,interest,social media */
+
+.containerssBox{
     display: flex;
     flex-direction: column;
-    margin: 2rem;
-    justify-content: center;
+    gap: 10px;
+}
+
+/* names */
+.editnames{
+    display: flex;
+    gap: 2px;
+}
+.imageditnames{
+    height: 10px;
+
+}
+.boxName{
+    font-family: 'Inter', sans-serif;
+    color: #3F3F3F;
+   
+    font-style: normal;
+ 
+    line-height: normal;
+}
+.inputname{
+    width: 70%;
+
+}
+.boxName span{
+    font-size: 20px;
+}
+/* majors */
+.showedirma{
+    height: 10px;
+    cursor: pointer;
+}
+/* major */
+.inputmajor{
+    width: 60%;
+}
+
+.aditionalInformation{
+    display: flex;
+    width: 100%;
     align-items: center;
+
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+.notonline{
+    border: 1px solid rgb(var(--ig-elevated-separator));
+    border-radius: 10px !important;
+    outline: none;
+    height: 2rem;
+    background-color: rgb(var(--ig-primary-background));
+    box-sizing: border-box;
+}
+
+
+/* updates or show images */
+.boxshowimageOrUPDATE{
+    border: 1px solid rgb(var(--ig-elevated-separator));
+    border-radius: 10px !important;
+    outline: none;
+    height: 5rem;
+    background-color: rgb(var(--ig-primary-background));
+    box-sizing: border-box;
+    position: sticky;
+    z-index: 2;
+    width: 45%;
+}
+.imageShow{
+    width: 50%;
+    border-radius: 8px;
+}
+
+/* updateImage */
+.inputnameaddfile{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    
 }

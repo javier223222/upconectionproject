@@ -4,21 +4,28 @@ import ProfileImage from './ProfileImage'
 
 
 const Navbar = props => {
-    console.log("ddd")
-    console.log(props.token)
+   
   return (
-    <nav className='navbar   d-flex'>
-    <div></div>
-    <Image src={props.hamburguer} alt='hamburguer menu'  ></Image>
+  <div className='fathercontainer' >
 
-  <div className='containersearch'>
-
-    <input type="search"></input>   
-  </div>
+   
  
-  <ProfileImage nameofuser={props.nameofuser} token={props.token} profileImage={props.profileImage?.urlprofile?props.profileImage:null}></ProfileImage>
+
+<div className='hamburguer'>
+       <Image src={props.hamburguer} className='imagenav' alt='hamburguer menu'  ></Image>
+ 
+    </div>
+    <input type="text"></input>   
+  
+    <nav className=''>
+    <ProfileImage
+     nameofuser={props.nameofuser} 
+     token={props.token}
+      profileImage={props.profileImage?.urlprofile?props.profileImage:null}></ProfileImage>
   
 </nav>
+
+</div>
   )
 }
 

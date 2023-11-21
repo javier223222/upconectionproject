@@ -1,163 +1,111 @@
 'use client'
 
 import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
-import acountCircle from '@/assets/acountcircle.svg'
-import OptionsImage from './OptionsImage'
-import Modal from './Modal'
-import ModalContinue from './ModalContinue'
-import axios from 'axios'
-import ModalImage from './ModalImage'
+import React, { useState ,useEffect} from 'react'
+import accountcircle from '../assets/acountcircle.svg'
+import ModalShowImage from './ModalShowImage'
+import ModalShowAddImage from './ModalShowAddImage'
+import ShowOrUpdateImg from './ShowOrUpdateImg'
+import { getProfileClientSide, postProfile } from '@/helpers/client_side'
 
-const ProfileImage = props => {
-    const [element,setElement]=useState({
-        profileImage:'',
-        show:false,
-        image:null,
-        modal:false,
-        anotherModal:false,
-        token:props.token,
-        profileImageModal:false
-    })
-    const showElections=()=>{
-        setElement(x=>{
-            return{
-                ...x,
-                show:!x.show
-            }
-        })
-    }
-    const showallimage=()=>{
-        setElement(x=>{
-            return{
-                ...x,
-                profileImageModal:!x.profileImageModal
-            }
-        })
-    }
-    useEffect(()=>{
-     setElement(x=>{
-        return{
-            ...x,
-            profileImage:props.profileImage?props.profileImage:''
-        }
+const ProfileImage = (props) => {
+
+     const [image,setimage]=useState(props.profileImage)
+     const [edit,setEdit]=useState({showoptions:false,modalShowImage:false,openEditImage:false,image:null,imageToShow:null,token:props.token
      })
-     setElement(x=>{return{
-        ...x,
-        token:props.token
-       }})
 
-       console.log(props.token)
-    },[])
-
-    const uploadImage=(e)=>{
-         setElement(x=>{
-             return{
-                 ...x,
-                 image:e.target.files[0]
-             }
-         })
-         console.log(e.target.files[0])
+     const headers=  {
+      "Authorization": edit.token
     }
-    const handelSubmit=async()=>{
- 
-
-     
-        const formData=new FormData()
-        formData.append('imagenprofile',element.image)
-        console.log(element.token)
-        formData.append('type','Profile')
-        const res=await axios.post(`http://localhost:80/profile/profileimage`,formData,{
-            headers:{
-                "Authorization":element.token
+    
+   const openModalShowImage=()=>{
+        setEdit(x=>{
+            return{
+                ...x,
+                modalShowImage:!x.modalShowImage
             }
         })
-        console.log(res.data)
-      
+   }
+   const openAndCloseOptions=()=>{
+    openModalShowImage()
+    openOptions()
+   }
 
-        const resr=await axios.get(`http://localhost:80/profile/profileimage?type=Profile`,{
-            headers:{
-              "Authorization":element.token
-            }
-          })
-
-          console.log(resr.data)
-          if(resr.data?.urlprofile){
-            setElement(x=>{return{
+    const openOptions=()=>{
+        setEdit(x=>{
+            return{
                 ...x,
-                profileImage:resr.data
-            }})
+                showoptions:!x.showoptions
+            }
+        })
+    }
+    const cancel=()=>{
+        openEditImage()
+        setEdit(x=>{
+          return{
+              ...x,
+              image:null,
+              imageToShow:null,
           }
-          close()
-   
+      })
+
 
     }
-    const close=()=>{
-        setElement(x=>{
+
+    const saveNeImage=async()=>{
+      
+      setimage(edit.imageToShow)
+    
+      const formData = new FormData();
+      formData.append("imagenprofile",edit.image)
+      cancel()
+      formData.append("type","Profile")
+
+      const addNewImage=await postProfile("profile/profileimage",formData,headers)
+      const getImageProfile=await getProfileClientSide("profile/profileimage?type=Profile",headers)
+
+      setimage(getImageProfile.urlprofile)
+
+    }
+    const openEditImage=()=>{
+        setEdit(x=>{
             return{
                 ...x,
-                modal:false,
-                image:null
+                openEditImage:!x.openEditImage
             }
         })
     }
-
-    const closeAnotherModal=()=>{
-        setElement(x=>{
-            return{
-                ...x,
-                anotherModal:!x.anotherModal
-            }
-        })
+    const openEditAndclose=()=>{
+      openEditImage()
+      openOptions()
     }
-
-    const addImage=()=>{
-        setElement(x=>{return{
-            ...x,
-            show:false,
-            modal:true
-        }})
-    }
-    const closeAll=()=>{
-        closeAnotherModal()
-        close()
-        
-    }
-
-    
-    
+   const onInputChange=(e)=>{
+     const {name,files}=e.target
+      setEdit(x=>{
+          return{
+              ...x,
+              image:files[0],
+              imageToShow:URL.createObjectURL(files[0]),
+          }
+      })
+   }
   return (
     <>
-    <div className='containerImgPro'>
+    
+    <div className='profileimagecontainer'>
 
-   
-    <Image onClick={showElections} src={element.profileImage==''?acountCircle:element.profileImage.urlprofile} 
-    className='imageuser'  width={"60"} height={"60"} alt='profile-image' ></Image>
-     <span className='spanuser'>{props.nameofuser?props.nameofuser:''}</span>
-
+        <Image onClick={openOptions} src={image==null?accountcircle:image} alt='profile image' className='profile' width={"50"} height={"50"}></Image>
     </div>
-    <div>
+    {
+      edit.showoptions?<ShowOrUpdateImg openUpdate={openEditAndclose} openShow={openAndCloseOptions} type="Perfil"></ShowOrUpdateImg>:<div ></div>
+    } 
+    <ModalShowImage type={0} close={openModalShowImage} image={image} open={edit.modalShowImage}></ModalShowImage>
+    <ModalShowAddImage type={0} onInputChange={onInputChange} 
+    nameEdit="Foto de perfil" imageToShow={edit.imageToShow} nameOFEditfEdit={edit.image} 
+    shwoModal={edit.openEditImage} name="image" save={saveNeImage}  cancel={cancel}></ModalShowAddImage>
 
-    {
-        element.show?
-       <OptionsImage showallimage={showallimage} addImage={addImage} containsImage={element.profileImage!=''?true:false}></OptionsImage>
-        :<></>
-    }
-    {
-        element.modal?<Modal handelSubmit={handelSubmit} closeAnotherModal={closeAnotherModal} close={close} uploadImage={uploadImage} image={element.image}></Modal>:<></>
-    }
-    {
-        element.anotherModal?<ModalContinue closeAll={closeAll} closedd={closeAnotherModal} close={close} ></ModalContinue>:<></>
-    }
-    {
-        element.profileImageModal?<ModalImage closeImage={showallimage} img={element.profileImage.urlprofile}></ModalImage>:<></>
-    }
-
-     </div>
-     </>
+    </>
   )
 }
-
-
 
 export default ProfileImage

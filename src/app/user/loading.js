@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 
 
 const loading = props => {
   return (
-    <div>loading ....</div>
+    <div><Suspense fallback={<p>cargando ..</p>}></Suspense></div>
   )
 }
 

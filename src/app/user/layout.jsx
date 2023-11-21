@@ -1,7 +1,7 @@
 import React from 'react'
 import "@/css/Navbar.css"
 
-import hamburguer from "@/assets/menu.svg"
+import hamburguer from "@/assets/conect.svg"
 import Image from 'next/image'
 import {cookies} from "next/headers"
 import axios from 'axios'

@@ -1,15 +1,25 @@
-import React from 'react'
-import ImageProfile from './ImageProfile'
+'use client'
+
+import React, { useState } from 'react'
+import ImagesPr from './ImagesPr'
 
 
-const ContainerImages = props => {
-  const images=props.allImage?props.allImage.map((x,i)=><ImageProfile key={i} urlimage={x.urlfile}  ></ImageProfile>):null
+const ContainerImages = (props) => {
+    const [media,setMedia]=useState({images:props.media,totalpages:props.totalpages,currentPage:props.page})
+
   return (
-    <div className='imagecontainer d-flex '>
-        {images ? images : <></>}
+    <div className='imagesContainer'>
+     <div className='allImages'>
+        {media.images!=[]?media.images.map(x=>{return <ImagesPr image={x.urlfile}></ImagesPr>}):<></>}
+     </div>
+     {
+        media.currentPage<media.totalpages?<button className='showfriends'>Ver mas</button>:<></>
+     }
+           
+   
+
     </div>
   )
 }
-
 
 export default ContainerImages

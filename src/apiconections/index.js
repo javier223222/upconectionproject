@@ -12,7 +12,15 @@ export const getProfile=async (url,token)=>{
     return res.data
   
   }
+export const getAnyProfile=async(url,token)=>{
+    const res=await axios.get(`${url}`,{
+        headers:{
+            "Authorization":token
+        }
+    })
+    return res.data
 
+}
 export const postConection = async (url,token,data) => {
     const res = await axios.post(`${process.env.API_GETIMAGEPORFILE}${url}`,data, {
         headers:{
