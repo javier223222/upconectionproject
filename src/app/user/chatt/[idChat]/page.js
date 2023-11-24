@@ -44,7 +44,7 @@ const Chatts = async (props) => {
         <>
    
             <>
-            <InformacionChat2  /></>
+          </>
        
             <Informacion/>
          

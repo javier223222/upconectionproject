@@ -29,11 +29,20 @@ const ComentPost = (props) => {
               justifyContent={"flex-start"}
               alignItems={"flex-start"}
               
-              >
+              ><div className='alinear-imagen-whit-coments'>
+                
                 <Image width={"60"} height={"60"} src={data.userImage!=null?data.userImage:acountCircle}></Image>
-                <h4>{props.username}</h4>
-                <p>{props.connent_Of_Comment}</p>
-                <h4>{props.created_at}</h4>
+                <div className='contenedor-de-publicaiones-modal'>
+                <div className='alinear-objetos'>
+                <p className='comentario-modal'> {props.username}{props.connent_Of_Comment}</p>
+               
+                </div>
+                <h4 className='alejate'>{props.created_at}</h4>
+
+                </div>
+              </div>
+
+          
 
 
               </Grid>
