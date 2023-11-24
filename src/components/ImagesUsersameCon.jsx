@@ -179,7 +179,7 @@ const ImagesUsersameCon = props => {
             }  
         </Grid>
         {
-          images.totalPages>1?<button className='showmoreImages' onClick={()=>openAny("openShowMore")}>Ver mas </button>:<></>
+          images.totalPages>1?<button className='anadir' onClick={()=>openAny("openShowMore")}>Ver mas </button>:<></>
         }
       <ModalShowUseUser beforeImg={beforeImg} 
       nextImg={nextIm} currentpage={images.numeOfElement}

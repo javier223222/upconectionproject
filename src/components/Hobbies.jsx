@@ -20,8 +20,10 @@ const Hobbies = ({idhobbieof,nameHobbieof,deleteInteres}) => {
     
   return (
     <div className='containerexper' onMouseOut={change} onMouseOver={change} >
+<div className='interesname'>
 
-    <p className='interesname' id={`${interest.idhobbie}`}>{interest.nameHobbie}</p>
+    <p  id={`${interest.idhobbie}`}>{interest.nameHobbie}</p>
+</div>
 
     {
       interest.showDelete ?<div className='imagecontainer'><Image onClick={async()=>deleteInteres(interest.idhobbie)} src={deleteicon}></Image></div>:<div className='imagecontainer'></div>

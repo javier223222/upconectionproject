@@ -95,7 +95,7 @@ const Profile = async (props) => {
           <PortImage token={gettoken()} portImage={portImage.success? portImage.urlprofile:null} ></PortImage>
           <div className='informationandProfileConta'>
           <ProfileImage token={gettoken()} profileImage={imageProfiles.success?imageProfiles.urlprofile:"https://res-console.cloudinary.com/drquhxacx/media_explorer_thumbnails/5709ab75c74c53bf84d155dd918c1a2c/detailed"} ></ProfileImage>
-          <Username username={name.username}></Username>
+          <Username  username={name.username}></Username>
           
           
           </div>

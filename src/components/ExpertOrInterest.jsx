@@ -18,8 +18,10 @@ const ExpertOrInterest = ({idinterestwo,interesttwo,deleteInterestOrExpert}) => 
     
   return (
     <div className='containerexper' onMouseOut={change} onMouseOver={change} >
+<div className='interesname'>
+        <p >{interest.interest}</p>
 
-        <p className='interesname'>{interest.interest}</p>
+</div>
 
         {
           interest.showDelete ?<div className='imagecontainer'><Image onClick={async()=>deleteInterestOrExpert(interest.idinterest)} src={deleteicon}></Image></div>:<div className='imagecontainer'></div>

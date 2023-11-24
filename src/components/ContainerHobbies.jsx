@@ -78,10 +78,13 @@ const ContainerHobbies = props => {
     <div className={`boxexpertOrInteres   ${props.class}`}>
         <h5 className='boxexpertOrinteresTitle'>Hobbies:</h5>
         <div className='interestOrExperts'>
+        
           {
-            interestOrExpert.hobbies!=[]?interestOrExpert.hobbies.map(x=>{ return  <Hobbies deleteInteres={deleteHobbie} idhobbieof={x.idhobbiesof} 
+            interestOrExpert.hobbies!=[]?interestOrExpert.hobbies.map(x=>{ return  <Hobbies  deleteInteres={deleteHobbie} idhobbieof={x.idhobbiesof} 
               nameHobbieof={x.namehobbie} ></Hobbies>}):<></>
           }
+
+         
         </div>
         {props.adminEdit?   <div className='anadicontainer'>
  
