@@ -1,41 +1,33 @@
-'use client'
-import "@/css/FriendsPrincipal.css";
-import Opciones_friends from '@/components/opciones_friends';
-import Amigos from '@/components/amigos';
-import React, { useState } from 'react';
-import ContenidoAmigos from '@/components/ContenidoAmigos';
-import NoAmigos from '@/components/NoAmigos';
+import Friends from '@/components/FriendContainer'
+import React from 'react'
+import {cookies} from "next/headers"
+import axios from 'axios'
 
 
-const Friends = () => {
-  const [mostrarContenidoAmigos, setMostrarContenidoAmigos] = useState(true);
-  const [mostrarContenidoSolicitudes, setMostrarContenidoSolicitudes] = useState(false);
-
-  const toggleContenidoAmigos = () => {
-    setMostrarContenidoAmigos(true);
-    setMostrarContenidoSolicitudes(false);
-  };
-
-  const toggleContenidoSolicitudes = () => {
-    setMostrarContenidoAmigos(false);
-    setMostrarContenidoSolicitudes(true);
-  };
-
+const getTokenofme=()=>{
+    const cokiestore= cookies()
+    const hasCokokie= cokiestore.has('tokenUser')
+    return hasCokokie?cokiestore.get("tokenUser").value:undefined
+  
+  }
+const HomeFriends = async () => {
+    const allFriends=await axios.get(`http://localhost:80/friends/`,{
+        headers:{
+            Authorization:getTokenofme()
+        }
+    })
+    const allRequest=await axios.get("http://localhost:80/friends/requesteFriends",{
+      headers:{
+        Authorization:getTokenofme()
+      }
+    })
+    console.log(allFriends.data)
+    console.log(allRequest.data)
   return (
-    <div>
+    <Friends requestfri={allRequest.data.result} token={getTokenofme()}  friends={allFriends.data.result}>
 
-      <div className='juntos'>
-        <Opciones_friends
-          toggleContenidoAmigos={toggleContenidoAmigos}
-          toggleContenidoSolicitudes={toggleContenidoSolicitudes}
-        />
-        <Amigos
-          mostrarContenidoAmigos={mostrarContenidoAmigos}
-          mostrarContenidoSolicitudes={mostrarContenidoSolicitudes}
-        />
-      </div>
-    </div>
-  );
+    </Friends>
+  )
 }
 
-export default Friends;
+export default HomeFriends

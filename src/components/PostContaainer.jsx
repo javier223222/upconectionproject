@@ -16,7 +16,7 @@ const PostContainer = ({token,username,allpublication,allapuntes,totalPagesPubl,
    
     if(!publication.whShow){
       if(publication.pagesPublic<publication.totalPagePublications){
-        const res=await getAnyProfile(`http://localhost:80/publications/?type=Publicacion&idcategoria=2&page=${parseInt(publication.pagesPublic)+1}&limit=4&username=${username}`,publication.tokenOfmy)
+        const res=await getAnyProfile(`http://localhost:80/publications/?type=Publicacion&idcategoria=1&page=${parseInt(publication.pagesPublic)+1}&limit=4&username=${username}`,publication.tokenOfmy)
         setPublication(x=>{
           return {
             ...x,
@@ -31,7 +31,7 @@ const PostContainer = ({token,username,allpublication,allapuntes,totalPagesPubl,
       
     }else{
       if(publication.pageApuntes<publication.totalPagesApuntes){
-        const res=await getAnyProfile(`http://localhost:80/publications/?type=Apunte&idcategoria=1&page=${parseInt(publication.pageApuntes)+1}&limit=4&username=${username}`,publication.tokenOfmy)
+        const res=await getAnyProfile(`http://localhost:80/publications/?type=Apunte&idcategoria=2&page=${parseInt(publication.pageApuntes)+1}&limit=4&username=${username}`,publication.tokenOfmy)
       
         setPublication(x=>{
           return {
@@ -116,7 +116,7 @@ const PostContainer = ({token,username,allpublication,allapuntes,totalPagesPubl,
       }
         
      </Grid>
-     <Grid  item>
+     <Grid   item>
      {
         publication.whShow?<span style={{color:publication.whShow?'#5654A8':"black"}}>Apuntes</span>:<span onClick={changeColor} style={{color:publication.whShow?'#5654A8':"black"}}>Apuntes</span>
       }
@@ -141,7 +141,7 @@ const PostContainer = ({token,username,allpublication,allapuntes,totalPagesPubl,
       {
         publication.allPublications.length!=0?publication.allPublications.map((x,i)=>{
           return <Post  idpublication={x.idpublicacion} 
-           contentOfPublication={x.cuerpodelapublicacion} token={publication.tokenOfmy} imageuse={imagende} username={publication.usernameoFmy} ></Post>
+           contentOfPublication={x.cuerpodelapublicacion} tipodecategorios={x.tipoDecategoria} nameexpertoOrExpert={x.namefininteorexpert}  token={publication.tokenOfmy} imageuse={imagende} username={publication.usernameoFmy} ></Post>
         }):<></>
       }
     </>:<></>
@@ -153,7 +153,7 @@ const PostContainer = ({token,username,allpublication,allapuntes,totalPagesPubl,
       
       {
         publication.allApuntes.length!=0?publication.allApuntes.map((x,i)=>{
-          return <Post idpublication={x.idpublicacion} token={publication.tokenOfmy} contentOfPublication={x.cuerpodelapublicacion} imageuse={imagende} username={publication.usernameoFmy} ></Post>
+          return <Post idpublication={x.idpublicacion} tipodecategorios={x.tipoDecategoria}  nameexpertoOrExpert={x.namefininteorexpert} token={publication.tokenOfmy} contentOfPublication={x.cuerpodelapublicacion} imageuse={imagende} username={publication.usernameoFmy} ></Post>
         }):<></>
       }
       </>:<></>

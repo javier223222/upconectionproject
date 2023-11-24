@@ -19,24 +19,35 @@ const gettoken= ()=>{
 const getImageProfile=async()=>{
   
   console.log(gettoken())
-  const res=await axios.get(`${process.env.API_GETIMAGEPORFILE}?type=Profile`,{
+  const res=await axios.get(`http://localhost:80/profile/profileimage?type=Profile`,{
     headers:{
       "Authorization":gettoken()
     }
   })
    return res.data
 }
+const getInformation=async()=>{
+  const res=await axios.get(`http://localhost:80/profile/getInformation`,{
+    headers:{
+      Authorization:gettoken()
+    }
+  })
+  return res.data
+}
 
 const HomeLayaout =async ({children}) => {
 
    const profileImage=await getImageProfile()
-   const name=await getProfile("profile/getInformation",gettoken())
+   const name=await getInformation()
+   console.log(profileImage)
   console.log(gettoken())
 
   return (
     <>
    
-    <Navbar nameofuser={name?.name?name.name:null} token={gettoken()} hamburguer={hamburguer} profileImage={profileImage?.urlprofile?profileImage:null}></Navbar>
+    <Navbar nameofuser={name.username}
+     token={gettoken()} hamburguer={hamburguer} 
+     profileImage={profileImage.urlprofile}></Navbar>
     {children}
     </>
   )

@@ -1,3 +1,4 @@
+'use client'
 import { Box, Grid } from '@mui/material'
 import Image from 'next/image'
 import acountCircle from '@/assets/acountcircle.svg'
@@ -6,8 +7,13 @@ import SocialMedia from './SocialMedia'
 import sqlImage from "@/assets/sql.svg"
 import flutterImage from "@/assets/flutter.svg"
 import springImage from "@/assets/spring.svg"
+import { useRouter } from 'next/navigation'
 
 const InformationAndImages = props => {
+
+   
+
+
   return (
     <Box sx={
       {
@@ -44,8 +50,13 @@ const InformationAndImages = props => {
         <Grid item   xs={6} container direction={"row"} alignItems={"center"} justifyContent={"center"}>
           <span>{props.namemajor} {props.numbermajor}</span>
         </Grid>
+        <Grid item  xs={6} container direction={"row"} alignItems={"center"} justifyContent={"end"}>
+        
+        
+          </Grid>
          
       </Grid>
+ 
 
       <Grid container  justifyContent="space-evenly"
   alignItems="center" direction="column" spacing={2} marginTop={"0.5rem"} gap={"0.7rem"} >
@@ -132,7 +143,9 @@ alignItems="flex-start" gap={"0.7rem"} marginBottom={"0.2rem"} spacing={0.5}>
       
       </Grid>
 
-     
+      
+          
+       
       
     </Box>
   )

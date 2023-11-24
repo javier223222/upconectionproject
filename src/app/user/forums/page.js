@@ -1,17 +1,12 @@
-import React from "react";
-import "@/css/forum.css";
-import ForumContainer from "@/components/ForumContainer";
-import ChatContainer from "@/components/ChatContainer";
-import Description from "@/components/Description";
+import React from 'react'
+import PropTypes from 'prop-types'
 
-const Forums = (props) => {
+const Homepage = props => {
   return (
-    <div className="layout">
-        <ForumContainer/>
-        <ChatContainer/>
-        <Description/>
-    </div>
-  );
-};
+    <div>Homepage</div>
+  )
+}
 
-export default Forums;
+
+
+export default Homepage

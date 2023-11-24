@@ -7,8 +7,8 @@ const Description = (props) => {
   return (
     <div className="description-container">
       <div className="descripcion">
-        <Image src={Neo} className="foro-picture"></Image>
-        acá va el nombre
+      <img src={props.imageforo}  className="foro-picture"></img>
+        {props.description}
       </div>
       
       <div className="multimedia-container">

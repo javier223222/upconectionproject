@@ -7,6 +7,7 @@ import ModalShowImage from './ModalShowImage'
 import ModalShowAddImage from './ModalShowAddImage'
 import ShowOrUpdateImg from './ShowOrUpdateImg'
 import { getProfileClientSide, postProfile } from '@/helpers/client_side'
+import { useRouter } from 'next/navigation'
 
 const ProfileImage = (props) => {
 
@@ -26,9 +27,11 @@ const ProfileImage = (props) => {
             }
         })
    }
+   const navigation =useRouter()
    const openAndCloseOptions=()=>{
-    openModalShowImage()
+  
     openOptions()
+    navigation.push("http://localhost:3000/user/chatt")
    }
 
     const openOptions=()=>{
@@ -76,8 +79,12 @@ const ProfileImage = (props) => {
         })
     }
     const openEditAndclose=()=>{
-      openEditImage()
+      navigation.push("http://localhost:3000/user/friends")
       openOptions()
+    }
+    const showProfile=()=>{
+      openOptions()
+      navigation.push("http://localhost:3000/user/profile")
     }
    const onInputChange=(e)=>{
      const {name,files}=e.target
@@ -89,15 +96,22 @@ const ProfileImage = (props) => {
           }
       })
    }
+   const shwoforos=()=>{
+    openOptions()
+    navigation.push("http://localhost:3000/user/forums")
+   }
   return (
     <>
     
     <div className='profileimagecontainer'>
 
         <Image onClick={openOptions} src={image==null?accountcircle:image} alt='profile image' className='profile' width={"50"} height={"50"}></Image>
+        <span>{
+          props.nameofuser
+          }</span>
     </div>
     {
-      edit.showoptions?<ShowOrUpdateImg openUpdate={openEditAndclose} openShow={openAndCloseOptions} type="Perfil"></ShowOrUpdateImg>:<div ></div>
+      edit.showoptions?<ShowOrUpdateImg shwoforos={shwoforos} showProfile={showProfile} openUpdate={openEditAndclose} openShow={openAndCloseOptions} type="Perfil"></ShowOrUpdateImg>:<div ></div>
     } 
     <ModalShowImage type={0} close={openModalShowImage} image={image} open={edit.modalShowImage}></ModalShowImage>
     <ModalShowAddImage type={0} onInputChange={onInputChange} 

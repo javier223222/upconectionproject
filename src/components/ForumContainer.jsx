@@ -1,3 +1,4 @@
+
 import React from "react";
 import "@/css/forum.css";
 import ForumsChart from "./ForumsChart";
@@ -10,7 +11,10 @@ const ForumContainer = (props) => {
         </div>
  
       <div className="contenedor-foros">
-        <ForumsChart/>
+        {
+          props.forosd.map(x=><ForumsChart name={x.nameforo} idforo={x.idforo}></ForumsChart>)
+        }
+       
 
       </div>
     </div>
