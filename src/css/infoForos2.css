@@ -1,0 +1,218 @@
+.contenedor-info2{
+    width: 25%;
+    height: 87vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start  ;
+    
+}
+
+.barra-regreso{
+    width: 100%;
+    height: 8vh;    
+
+    display: flex;
+    flex-direction: row;
+    
+
+}
+.row-regreso{
+width:25% ;
+height: 8vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.titulo-regreso{
+    width:75% ;
+    height: 8vh;
+
+display: flex;
+align-self: center;
+justify-content: center;
+
+}
+
+.titulo-regreso p{
+    margin-top:8% ;
+}
+
+.barra-multimedia{
+    width: 100%;
+    height: 8vh;    
+
+    display: flex;
+    flex-direction:row;
+    justify-content: start;
+    
+}
+.button-multimedia {
+    width: 25%;
+    height: 8vh;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    transition: background-color 0.3s; /* Agrega una transición suave al cambio de color de fondo */
+}
+
+.button-multimedia:hover {
+    background-color: rgba(87, 87, 87, 0.508);
+}
+
+.button-multimedia:active {
+    color: purple;
+    border-bottom: purple 4px solid;
+    background-color: rgba(87, 87, 87, 0.7); /* Cambia el color de fondo durante el clic */
+}
+
+.button-multimedia.seleccionado {
+    border-bottom: purple 4px solid;
+
+}
+    .multimedia2{
+        width: 100%;
+        height: auto;
+ 
+        display: flex;
+        flex-wrap: wrap;
+ overflow: auto;
+        justify-content: start;
+     
+
+    }
+  
+  
+    .multi{
+        width: 30%;
+        height: 10vh;
+        margin: 2px;
+        filter: blur(1.5px);
+        margin-top: 5%;
+   
+    }
+
+
+    .multi:hover{
+        transform: scale(1);
+        filter: blur(0px);
+        
+        transition:all 0.95s;
+       
+        
+    }
+    
+    .multi:active{
+        transform: scale(0.89);
+
+    }
+
+    
+
+ /* ... Otros estilos ... */
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+  }
+  
+  .lightbox-image {
+  width: auto;
+  height: auto;
+
+
+  }
+  
+  .lightbox button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    background: rgba(0, 0, 0, 0); 
+    border: none;
+  }
+.arrows{
+    fill: white;
+    margin: 20px;
+}
+
+.close-ligth{
+    fill: white;
+}
+
+
+.archivo {
+    position: relative;
+    width: 80%;
+    height: 9vh;
+    background-color: rgb(233, 233, 233);
+    margin-left: 5%;
+    margin-top: 5%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+     border-radius: 10px;
+  }
+  .archivo-icon{
+width: 20%;
+height: 9vh;
+display: flex;
+justify-content: center;
+align-items:center ;
+background-color: rgba(106, 16, 196, 0.484);
+  }
+  .data {
+    width: 80%;
+    height: 9vh;
+    display: flex;
+    align-items: center; /* Esto centrará verticalmente el contenido */
+    margin-left: 1%;
+  }
+
+  .data p{
+    display: flex;
+    align-items: center; /* Esto centrará verticalmente el contenido */
+    margin-left: 1%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+  }
+  
+  .infoArchivo {
+    position: absolute;
+   
+    width: 100%;
+   height: 9vh;
+    color: white;
+
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; 
+  }
+  
+  .archivo:hover .infoArchivo {
+    opacity: 1;
+  }
+  
+  .descargarBtn {
+    background-color: #afafaf;
+    color: white;
+    width: 20%;
+    height: 9vh;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+border: none;
+    cursor: pointer;
+ 
+  }
+  

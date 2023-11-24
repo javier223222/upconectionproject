@@ -1,0 +1,144 @@
+.container-chats{
+    width: 25%;
+    height: 87vh;
+    border-right: 0.4px solid rgb(164, 164, 164);
+}
+
+
+.buscador{
+    width: 100%;
+    height: 20vh;
+
+    display: flex;
+justify-content: center;
+flex-direction: column;
+align-items:start;
+}   
+.buscador h1{
+  margin-left: 10%;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 90%;
+    height: 4vh ;
+    margin-left: 3%;
+    margin-top: 2%;
+  }
+  
+  .search__input {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #f4f2f2;
+    border: none;
+    color: #333333;
+    padding: 0.7rem 1rem;
+    border-radius: 30px;
+    width: 100%;
+    transition: all ease-in-out .5s;
+    margin-right: -2rem;
+  }
+  
+  .search__input:hover, .search__input:focus {
+    box-shadow: 0 0 1em #00000013;
+  }
+  
+  .search__input:focus {
+    outline: none;
+    background-color: #f0eeee;
+  }
+  
+  .search__input::-webkit-input-placeholder {
+    font-weight: 100;
+    color: #3a3a3a;
+  }
+  
+  .search__input:focus + .search__button {
+    background-color: #f0eeee;
+  }
+  
+  .search__button {
+    border: none;
+    background-color: #f4f2f2;
+    margin-top: .1em;
+  }
+  
+  .search__button:hover {
+    cursor: pointer;
+  }
+  
+  .search__icon {
+    height: 1.3em;
+    width: 1.3em;
+    fill: #313131;
+  }
+
+  .chats{
+    display: flex;
+    flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 67vh;
+  overflow: auto;
+  border-top: 0.4px solid rgba(164, 164, 164, 0.34);
+  }
+  .chats:hover{
+    border-top: 0.4px solid rgba(164, 164, 164, 0.34);
+    overflow: auto;
+  }
+
+  .foros-preview {
+    width: 75%;
+    height: 25vh;
+    display: flex;
+    /* align-items: center; */
+    background-color: white;
+    margin: 1vh;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.foros-preview:hover{
+background-color: rgba(191, 150, 191, 0.405);
+border:0.5px solid rgba(164, 164, 164, 0.34);
+border-radius: 10px;
+}
+.foros-preview:active{
+  background-color: rgba(208, 102, 208, 0.405);
+  border:0.5px solid #333333;
+border-radius: 10px;
+}
+.user-chat{
+width: 25%;
+height: 8vh;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.image-user-chat{
+    width: 60%;
+    height: 7vh;
+    border-radius: 45%;
+
+}
+
+.name{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  height: 20vh;
+}
+
+.name p{
+
+  font-size: 10px;
+}

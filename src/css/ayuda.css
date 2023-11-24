@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.c{
+    display: flex;
+    margin: 5vh;
+    justify-content: center;
+}
+.linea{
+    width: 80%;
+    margin-bottom: 10vh;
+}

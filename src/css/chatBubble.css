@@ -1,0 +1,46 @@
+.container-user{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+  
+    align-items: center;
+
+    margin-bottom: 5vh;
+    border-radius: 2vh;
+    width: 60%;
+    /* max-width: 50vh; */
+}
+
+
+.profile{
+display: flex;
+
+border-top-left-radius: 5.594405594405594vh;
+border-bottom-left-radius: 5.594405594405594vh;
+/* background-color: aqua; */
+margin-left:1vh ;
+width:auto;
+}
+
+.profile:hover{
+    background-color: aliceblue;
+}
+.picture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8vh; 
+    height: 8vh; 
+    border-radius: 5.594405594405594vh;
+}
+
+/* #Profile{
+    width: 10%;
+} */
+
+.message{
+width: 70%;
+height: auto;
+
+
+}

@@ -1,0 +1,22 @@
+.card{
+    /* background-color: antiquewhite; */
+    width: 42.32008592910849vh;
+    height:  45vh;
+    border: 0.5px solid #CACACA;
+    border-radius: 1.0741138560687433vh;
+    cursor: pointer;
+
+}
+.svg-card{
+    width: 38vh;
+    height: auto;
+}
+.linea-2{
+    margin-top: 5vh;
+}
+.tittle{
+    font-size: 2vh;
+    margin-top: 3vh;
+    text-align: center;
+
+}
