@@ -1,0 +1,39 @@
+.select{
+    width: 6vw;
+    border: none;
+    /* align-items: center; */
+}
+
+.text-area{
+    margin: 2vw;
+    /* margin-left: 2vh; */
+    width: 30vw;
+    height: 20vh;
+}
+
+.caja{
+    /* background-color: antiquewhite; */
+    width: auto;
+    height: auto;
+}
+
+.icon{
+    width: 5vw;
+    height: 5vw;
+}
+
+
+
+.prueba{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.select{
+    width: 8vw;
+    height: 6.5vh;
+    padding:2vh;
+    
+    border-radius: 2px;
+}

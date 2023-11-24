@@ -11,7 +11,7 @@ import { useRouter } from 'next/navigation'
 
 const InformationAndImages = props => {
 
-   
+    
 
 
   return (

@@ -7,7 +7,7 @@ const Cuadrosuno = () => {
         <div className='cuadro1'>
 
         </div>
-    </div>
+    </div> 
   )
 }
 
