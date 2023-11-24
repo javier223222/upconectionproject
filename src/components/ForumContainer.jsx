@@ -7,7 +7,7 @@ const ForumContainer = (props) => {
   return (
     <div className="ForumContainer">
         <div className="titulo-contenedor">
-        <h4>FOROS</h4>
+        <h4 className="titulo-foros">FOROS</h4>
         </div>
  
       <div className="contenedor-foros">

@@ -93,11 +93,7 @@ const ChatContainer = (props) => {
      
       <div className="message">
         <input onChange={onInputFileChange} type="file" name="document" id="addar" style={{ width: "0.1px",
- height: "0.1px",
- opacity: 0,
- overflow: "hidden",
- position: "absolute",
- zindex: -1}}></input>
+}}></input>
         <label htmlFor="addar" className="boton">
           <Image src={clip}></Image>
         </label>

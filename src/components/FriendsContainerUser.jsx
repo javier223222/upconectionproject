@@ -7,7 +7,7 @@ import React, { useState } from 'react'
 import acountCircle from '@/assets/acountcircle.svg'
 import ModalSwoMore from './ModalSwoMore'
 import { getProfileClientSide } from '@/helpers/client_side'
-
+ 
 const FriendsContainerUser = props => {
     const [friends,setFrieds]=useState({allfriend:props.freinds,totalPages:props.totalPages,page:props.page,showMore:false,
       username:props.username,showmArray:props.freinds,totalPagesSho:props.totalPages,pagenuw:props.page,token:props.token})

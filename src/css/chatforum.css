@@ -1,17 +1,19 @@
 .ChatContainer{
     width: 60%;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    height: 100%;
+    /* display: flex;
+    flex-direction: column; */
     border-left: 1px solid rgb(164, 164, 164);
+    overflow: scroll;
+    max-height: 20%;
 }
 
 .message-container{
     display: flex;
-
     width: 100%;
     height: 100%;
-    /* background-color: aqua; */
+    margin-top: 5vh;
+
 }
 
 .left{
@@ -47,4 +49,25 @@
     background-color: transparent;
     padding-top: 6px;
     border: 0;
+}
+
+.display{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contenido{
+    background-color: rgba(241, 121, 241, 0.238);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin-top: 5%;
+    margin-left: 10%;
+    padding: 10px;
+    box-sizing: border-box;
+    word-break: break-word;
 }
