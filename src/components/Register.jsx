@@ -7,41 +7,42 @@ const Register = (props) => {
       <div className="container-form">
         <h2 className="titulo">Registrate</h2>
         <div className="content">
-            <input placeholder="username" className="imput" />
+            <input onChange={props.onInputChange} placeholder="username" name="username" className="imput" />
           </div>
         <div className="content">
-          <input placeholder="Correo" className="imput" />
-          <input placeholder="Nombre" className="imput" />
+          <input onChange={props.onInputChange} placeholder="Correo" name="email" className="imput" />
+          <input  onChange={props.onInputChange}placeholder="Nombre" name="nombre" className="imput" />
         </div>
         <div className="aaa">
             
           <div className="content">
-            <input placeholder="Contraseña" type="password" className="imput" />
-            <input placeholder="Apellido P." className="imput" />
+            <input onChange={props.onInputChange} name="password" placeholder="Contraseña" type="password" className="imput" />
+            <input onChange={props.onInputChange} name="apellidop" placeholder="Apellido P." className="imput" />
           </div>
           <div className="content">
-            <input
+            <input  onChange={props.onInputChange}
+              name="password2"
               placeholder="Confirma la contraseña"
               type="password"
               className="imput"
             />
-            <input placeholder="Apellido M." className="imput" />
+            <input  onChange={props.onInputChange}name="apellidom" placeholder="Apellido M." className="imput" />
           </div>
           <div className="content">
-            <input type="date" onchange="submitBday()" className="age" />
+            <input onChange={props.onInputChange} name="birthday" type="date" onchange="submitBday()" className="age" />
           </div>
           <div className="content">
-          <select className="sex">
-              <option>Male</option>
-              <option>Female</option>
+          <select onChange={props.onInputChange} name="sex"  className="sex">
+              <option value={"M"}>Male</option>
+              <option value={"F"}>Female</option>
             </select>
           </div>
           <div className="content">
-          <select name="Carrera" className="sex">
-            <option>Software</option>
+          <select  onChange={props.onInputChange} name="Carrera" className="sex">
+            <option value={"Ingeniería en Software"}>Software</option>
           </select>
           </div>
-          <button onClick={props.handleChange} className="accept">
+          <button onClick={async()=>props.handleChange()} className="accept">
           Continuar
         </button>
         </div>

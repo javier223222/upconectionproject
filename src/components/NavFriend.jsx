@@ -5,13 +5,16 @@ import Image from "next/image"
 import Persona from  "@/assets/persona.jpg"
 
 
-const NavFriend = () => {
+const NavFriend = (props) => {
   return (
    <nav className="navfriends">
     <div className="contenedorImgAndTxt">
-    <Image className="usuarionav" src={Persona}/>
+      {
+        props.image=="null"?<Image className="usuarionav" width={"80"} height={"80"} src={Persona}/>: <Image className="usuarionav" width={"80"} height={"80"} src={props.image}/>
+      }
+   
 <div className="centered">
-<p>Jose Luis Estrada Pineda.</p>
+<p>{props.name} {props.apellidop} {props.apellidom}</p>
 </div>
  
     </div>

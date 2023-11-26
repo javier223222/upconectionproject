@@ -13,6 +13,7 @@ import PostContainer from "@/components/PostContaainer";
 import SendMessageButton from "@/components/SendMessageButton";
 import ReFriends from "@/components/ReFriends";
 import ButtonSendFriendRequest from "@/components/ButtonSendFriendRequest";
+import ButtonAcceptRequest from "@/components/ButtonAcceptRequest";
 
 const getTokenofme = () => {
   const cokiestore = cookies();
@@ -55,6 +56,7 @@ const UserProfile = async (para) => {
     `profile/hobbie?username=${username}`,
     getTokenofme()
   );
+
   const socialmedia = await getProfile(
     `profile/socialmedia?username=${username}`,
     getTokenofme()
@@ -76,9 +78,12 @@ const UserProfile = async (para) => {
     getTokenofme()
   );
   const getSenderFriend = await getProfile(
-    `friends//getSpecificRequest?idfriend=${inforMationOfUser.iduser}`,
+    `friends/getSpecificRequest?idfriend=${inforMationOfUser.iduser}`,
     getTokenofme()
   );
+  const getSpecificByUsername=await getProfile("profile/getUsernameByToken",getTokenofme())
+  
+  const getSpecificFriendRequestSide=await getProfile(`friends/getSpecifcRequesrFriendSide?idfriend=${inforMationOfUser.iduser}`,getTokenofme())
   console.log(getSenderFriend);
   console.log(apuntes);
   console.log(posts);
@@ -93,6 +98,9 @@ const UserProfile = async (para) => {
   console.log(hobbies);
   console.log(socialmedia);
   console.log(getSpecificFriend);
+  console.log(getSpecificFriendRequestSide)
+
+  console.log(getSpecificByUsername)
 
   return (
     <div>
@@ -212,7 +220,7 @@ const UserProfile = async (para) => {
       )}
 
       {getSpecificFriend.result.length == 0 &&
-      getSenderFriend.result.length == 0 ? (
+      getSenderFriend.result.length == 0 && getSpecificByUsername.username!=username ? (
         <ButtonSendFriendRequest
           idrecives={inforMationOfUser.iduser}
           token={getTokenofme()}
@@ -220,6 +228,10 @@ const UserProfile = async (para) => {
       ) : (
         <></>
       )}
+      {
+        getSpecificFriendRequestSide.result.length!=0?<ButtonAcceptRequest ></ButtonAcceptRequest>
+        :<></>
+      }
     </div>
   );
 };

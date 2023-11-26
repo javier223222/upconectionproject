@@ -79,7 +79,7 @@ const Chatfriends = (props) => {
   return (
 
     <div className="container-chat">
-            <NavFriend/>
+            <NavFriend image={props.imageuser} name={props.name} apellidop={props.apellidp} apellidom={props.apellidom} />
             <div className="container-origin">
               
             <div className="chat">

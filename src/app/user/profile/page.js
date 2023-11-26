@@ -94,7 +94,7 @@ const Profile = async (props) => {
         <div className='PersonalDataInformation'>
           <PortImage token={gettoken()} portImage={portImage.success? portImage.urlprofile:null} ></PortImage>
           <div className='informationandProfileConta'>
-          <ProfileImage token={gettoken()} profileImage={imageProfiles.success?imageProfiles.urlprofile:"https://res-console.cloudinary.com/drquhxacx/media_explorer_thumbnails/5709ab75c74c53bf84d155dd918c1a2c/detailed"} ></ProfileImage>
+          <ProfileImage profile={true} token={gettoken()} profileImage={imageProfiles.success?imageProfiles.urlprofile:"https://res-console.cloudinary.com/drquhxacx/media_explorer_thumbnails/5709ab75c74c53bf84d155dd918c1a2c/detailed"} ></ProfileImage>
           <Username  username={name.username}></Username>
           
           
@@ -144,7 +144,7 @@ const Profile = async (props) => {
     <Grid  sx={{flexGrow:1}} container spacing={2}>
            <Grid  item xs={12} >
 
-<PostContainer username={name.username} token={gettoken()} 
+<PostContainer admin={true} username={name.username} token={gettoken()} 
 allpublication={posts.result}
  allapuntes={apuntes.result} totalPagesPubl={posts.totalpages} totalPagesApu={apuntes.totalpages}
   pageApu={apuntes.page} pagepu={posts.page} imagende={imageProfiles.urlprofile} >

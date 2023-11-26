@@ -6,13 +6,15 @@ import { getAnyProfile, getProfile } from '@/apiconections'
 import ModalPost from './ModalPost'
 import likeImg from "@/assets/like.svg"
 import axios from 'axios'
+import deleteImg from "@/assets/delete.svg"
 import { useRouter } from 'next/navigation'
 
-const Post = ({imageuse,username,contentOfPublication,idpublication,token,tipodecategorios,nameexpertoOrExpert}) => {
+const Post = ({imageuse,username,contentOfPublication,idpublication,token,tipodecategorios,nameexpertoOrExpert,admin,deletePubli}) => {
   const [imagePublication,setImagePublication]=useState({image:null,idpublicacion:idpublication,likes:[],tokenp:token,iduser:'',
   liked:false,contentMesage:null,defaultMe:"",
+  showDelete:false,
   showALLPubli:false,
-  buttonOrEnviar:false})
+  buttonOrEnviar:false,admine:admin})
   
   useEffect(()=>{
     
@@ -23,6 +25,15 @@ const Post = ({imageuse,username,contentOfPublication,idpublication,token,tipode
     
   },[])
   const navigation=useRouter()
+  const showDelete=()=>{
+    setImagePublication(x=>{
+      return{
+        ...x,
+        showDelete:!x.showDelete
+      }
+    
+    })
+  }
   const openModal=()=>{
     setImagePublication(x=>{
       return {
@@ -155,7 +166,7 @@ const Post = ({imageuse,username,contentOfPublication,idpublication,token,tipode
   }
     
   return (
-    <div style={{width:"100%"}}>
+    <div onMouseOver={showDelete} onMouseOut={showDelete} style={{width:"100%"}}>
     <Paper   sx={{
         p: 2,
         margin: 'auto',
@@ -167,7 +178,7 @@ const Post = ({imageuse,username,contentOfPublication,idpublication,token,tipode
       }}   elevation={4}>
      
      <Grid   container spacing={2}>
-        <Grid item  container
+        <Grid item   container
   direction="row"
   justifyContent="flex-start"
   alignItems="flex-start"  >
@@ -191,8 +202,11 @@ const Post = ({imageuse,username,contentOfPublication,idpublication,token,tipode
          
           
         >
+         {
+          imagePublication.admine?imagePublication.showDelete?<Image onClick={async()=>deletePubli(imagePublication.idpublicacion)}  src={deleteImg} ></Image>:<></>:<></>
+         } 
      
-      <Image   src={likeImg} onClick={async()=>addLike()}></Image>:
+      <Image   src={likeImg} onClick={async()=>addLike()}></Image>
         
         
         

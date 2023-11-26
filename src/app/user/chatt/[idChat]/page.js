@@ -22,10 +22,15 @@ const getTokenMy=()=>{
 const Chatts = async (props) => {
 
 
+   const {name,apellidp,apellidom,image}=props.searchParams
+   console.log(image)
   const {idChat}=props.params
-
-  const getConversations=await getAnyProfile(`http://localhost:80/chat/messages?idmessage=${idChat}`,getTokenMy())
+  
+ 
+   const getConversations=await getAnyProfile(`http://localhost:80/chat/messages?idmessage=${idChat}`,getTokenMy())
   console.log(getConversations)
+ 
+ 
 
 
 
@@ -39,14 +44,14 @@ const Chatts = async (props) => {
     
      
      
-      <Chatfriends idChat={idChat} token={getTokenMy()}  conversations={getConversations.result}/>
+      <Chatfriends name={name} apellidp={apellidp} apellidom={apellidom} imageuser={image} idChat={idChat} token={getTokenMy()}  conversations={getConversations?.result?getConversations.result:[]}/>
 
         <>
    
             <>
           </>
        
-            <Informacion/>
+            <Informacion  name={name} apellidp={apellidp} apellidom={apellidom} imageuser={image}/>
          
         </>
     

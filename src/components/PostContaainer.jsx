@@ -5,13 +5,48 @@ import React, { useState } from 'react'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import Post from './PostBody'
 import { getAnyProfile } from '@/apiconections'
+import axios from 'axios'
 
-const PostContainer = ({token,username,allpublication,allapuntes,totalPagesPubl,totalPagesApu,pagepu,pageApu,imagende}) => {
+const PostContainer = ({token,username,allpublication,allapuntes,totalPagesPubl,totalPagesApu,pagepu,pageApu,imagende,admin}) => {
   const [publication, setPublication] = useState({whShow:false,allPublications:allpublication,
     allApuntes:allapuntes,totalPagePublications:totalPagesPubl,
     totalPagesApuntes:totalPagesApu,pageApuntes:pagepu,pagesPublic:pageApu,usernameoFmy:username,
     tokenOfmy:token
   })
+  
+  const deletePost=async(id)=>{
+    const res=await axios.delete(`http://localhost:80/publications/?idpublicacion=${id}`,{
+      headers:{
+        Authorization:publication.tokenOfmy
+      }
+    })
+    if(!publication.whShow){
+      const res=await getAnyProfile(`http://localhost:80/publications/?type=Publicacion&idcategoria=1&page=1&limit=4`,publication.tokenOfmy)
+      setPublication(x=>{
+        return {
+          ...x,
+          allPublications:res.result,
+          totalPagePublications:parseInt(res.totalpages),
+
+          pagesPublic:parseInt(res.page)
+          
+        }
+      })
+    }else{
+      const res=await getAnyProfile(`http://localhost:80/publications/?type=Apunte&idcategoria=2&page=1&limit=4`,publication.tokenOfmy)
+      setPublication(x=>{
+        return {
+          ...x,
+          allApuntes:res.result,
+          totalPagesApuntes:parseInt(res.totalpages),
+          pageApuntes:parseInt(res.page)
+          
+        }
+      })
+    }
+    
+
+  }
   const getMorePublications=async()=>{
    
     if(!publication.whShow){
@@ -140,7 +175,7 @@ const PostContainer = ({token,username,allpublication,allapuntes,totalPagesPubl,
       
       {
         publication.allPublications.length!=0?publication.allPublications.map((x,i)=>{
-          return <Post  idpublication={x.idpublicacion} 
+          return <Post deletePubli={deletePost} admin={admin}  idpublication={x.idpublicacion} 
            contentOfPublication={x.cuerpodelapublicacion} tipodecategorios={x.tipoDecategoria} nameexpertoOrExpert={x.namefininteorexpert}  token={publication.tokenOfmy} imageuse={imagende} username={publication.usernameoFmy} ></Post>
         }):<></>
       }
@@ -153,7 +188,7 @@ const PostContainer = ({token,username,allpublication,allapuntes,totalPagesPubl,
       
       {
         publication.allApuntes.length!=0?publication.allApuntes.map((x,i)=>{
-          return <Post idpublication={x.idpublicacion} tipodecategorios={x.tipoDecategoria}  nameexpertoOrExpert={x.namefininteorexpert} token={publication.tokenOfmy} contentOfPublication={x.cuerpodelapublicacion} imageuse={imagende} username={publication.usernameoFmy} ></Post>
+          return <Post deletePubli={deletePost} admin={admin} idpublication={x.idpublicacion} tipodecategorios={x.tipoDecategoria}  nameexpertoOrExpert={x.namefininteorexpert} token={publication.tokenOfmy} contentOfPublication={x.cuerpodelapublicacion} imageuse={imagende} username={publication.usernameoFmy} ></Post>
         }):<></>
       }
       </>:<></>

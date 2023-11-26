@@ -1,6 +1,7 @@
 import React from "react";
 
 import "@/css/formlogin.css"
+import Link from "next/link";
 
 const Form = (props) => {
     return (
@@ -19,7 +20,7 @@ const Form = (props) => {
         </div>
           <button onClick={props.handleSubmit} className="accept">Aceptar</button>
         </div>
-      <footer><a href="">Registrarse</a></footer>
+      <footer><Link href="/Register">Registrarse</Link></footer>
       </div>
     )
   }

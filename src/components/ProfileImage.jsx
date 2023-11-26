@@ -8,6 +8,9 @@ import ModalShowAddImage from './ModalShowAddImage'
 import ShowOrUpdateImg from './ShowOrUpdateImg'
 import { getProfileClientSide, postProfile } from '@/helpers/client_side'
 import { useRouter } from 'next/navigation'
+import { Grid, Paper } from '@mui/material'
+import accountbox from "../assets/accountbox.svg"
+import uploaad from "../assets/upload.svg"
 
 const ProfileImage = (props) => {
 
@@ -111,8 +114,33 @@ const ProfileImage = (props) => {
           }</span>
     </div>
     {
-      edit.showoptions?<ShowOrUpdateImg shwoforos={shwoforos} showProfile={showProfile} openUpdate={openEditAndclose} openShow={openAndCloseOptions} type="Perfil"></ShowOrUpdateImg>:<div ></div>
+      edit.showoptions && props.nav ?<ShowOrUpdateImg shwoforos={shwoforos} showProfile={showProfile} openUpdate={openEditAndclose} openShow={openAndCloseOptions} type="Perfil"></ShowOrUpdateImg>:<div ></div>
     } 
+    {
+    edit.showoptions &&  props.profile?<Paper
+      sx={{
+        p: 2,
+      marginLeft: '20rem',
+        maxWidth: "30%",
+        position:"sticky",
+        flexGrow: 1,
+        backgroundColor: (theme) =>
+          theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+      }}
+    >
+      <Grid container xs direction={"column"} spacing={2}>
+          <Grid item container> 
+          <Image src={accountbox} onClick={openModalShowImage} ></Image>
+          <p onClick={openModalShowImage}>Ver foto de portada</p>
+          </Grid>
+          <Grid item>
+              <Image src={uploaad} onClick={openEditImage}></Image>
+              <p onClick={openEditImage}>Cambiar foto de portada</p>
+          </Grid>
+      </Grid>
+
+    </Paper>:<></>
+    }
     <ModalShowImage type={0} close={openModalShowImage} image={image} open={edit.modalShowImage}></ModalShowImage>
     <ModalShowAddImage type={0} onInputChange={onInputChange} 
     nameEdit="Foto de perfil" imageToShow={edit.imageToShow} nameOFEditfEdit={edit.image} 

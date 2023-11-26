@@ -7,11 +7,12 @@ import acountCircle from '@/assets/acountcircle.svg'
 import { getAnyProfile } from '@/apiconections'
 import ComentPost from './ComentPost'
 import axios from 'axios'
+import { useRouter } from 'next/navigation'
 
 
 const ModalPost = props => {
     const [comments,SetImages]=useState({allComments:[],idPublication:props.idPublication,token:props.token,message:''})
-
+    const navigation=useRouter()
     useEffect(()=>{
       getMessagges()
     },[])
@@ -77,8 +78,8 @@ const ModalPost = props => {
                 justifyContent="flex-start"
                 alignItems="flex-start"
                 >
-                       <Image style={{borderRadius:"50px"}} width={"60"} height={"60"} src={props.imageuse!=null||props.imageuse!=undefined?props.imageuse:acountCircle}></Image>
-          <h4> {props.username}</h4>
+                       <Image onClick={()=>{navigation.push(`http://localhost:3000/user/${props.username}`)}} style={{borderRadius:"50px"}} width={"60"} height={"60"} src={props.imageuse!=null||props.imageuse!=undefined?props.imageuse:acountCircle}></Image>
+          <h4 onClick={()=>{navigation.push(`http://localhost:3000/user/${props.username}`)}} > {props.username}</h4>
           <Grid item  
            container 
            direction={"row"}

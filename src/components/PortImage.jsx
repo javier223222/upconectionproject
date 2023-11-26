@@ -3,8 +3,11 @@ import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import ShowOrUpdateImg from './ShowOrUpdateImg'
 import ModalShowImage from './ModalShowImage'
+import accountbox from "../assets/accountbox.svg"
+import uploaad from "../assets/upload.svg"
 import ModalShowAddImage from './ModalShowAddImage'
 import { getProfileClientSide, postProfile } from '@/helpers/client_side'
+import { Grid, Paper } from '@mui/material'
 
 const PortImage = (props) => {
     const [image,setimage]=useState(null)
@@ -98,12 +101,38 @@ const PortImage = (props) => {
             image==null?<div onClick={openOptions} className='css-eiir0b'></div>:<Image onClick={openOptions} className='imagePort' width={"500"} height={"250"} src={image} alt='profile port image'></Image>
         }
        
-     
+      {
+        edit.showoptions?    <Paper
+        sx={{
+          p: 2,
+        marginLeft: '20rem',
+          maxWidth: "30%",
+          position:"sticky",
+          flexGrow: 1,
+          backgroundColor: (theme) =>
+            theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+        }}
+      >
+        <Grid container xs direction={"column"} spacing={2}>
+            <Grid item container> 
+            <Image src={accountbox} onClick={openModalShowImage} ></Image>
+            <p onClick={openModalShowImage}>Ver foto de portada</p>
+            </Grid>
+            <Grid item>
+                <Image src={uploaad} onClick={openEditImage}></Image>
+                <p onClick={openEditImage}>Cambiar foto de portada</p>
+            </Grid>
+        </Grid>
+
+      </Paper>:<div style={{   p: 2,
+        marginLeft: '20rem',
+          maxWidth: "30%",
+          position:"sticky",
+          flexGrow: 1,}}></div>
+      }
         
     </div>
-    {
-      edit.showoptions?<ShowOrUpdateImg openUpdate={openEditAndclose} openShow={openAndCloseOptions} type="Portada"></ShowOrUpdateImg>:<div ></div>
-    } 
+  
     <ModalShowImage type={1} close={openModalShowImage} image={image} open={edit.modalShowImage}></ModalShowImage>
     <ModalShowAddImage type={1} onInputChange={onInputChange} 
     nameEdit="Foto de portada" imageToShow={edit.imageToShow} nameOFEditfEdit={edit.image} 
