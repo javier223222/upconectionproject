@@ -1,19 +1,43 @@
 
+.fathercontainer{
+  display: flex;
+  background-color: #E5C1FF;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px ;
+  padding: 5px 5%;
+}
+.hamburguer{
+  width: auto;
+  height: auto;
+}
 
+.imagenav{
+  width: 10.5vh;
+  height: auto;
+}
 
-  .fathercontainer{
-    display: flex;
-    background-color: #E5C1FF;
-    justify-content: space-between;
-    align-items: center;
-    height: 65px !important;
-    padding: 5px 5%;
+.busqueda{
+  border-radius: 5vw;
+  border: .5px solid gray;
+  width: 15vw;
+  height: 3.5vh;
+}
 
-  }
-  .imagenav{
-    width: 34%;
-    
+.profile{
+  border-radius: 6vh;
+  width: 7vh;
+  height: 7vh;
+  margin-right: 2vh;
+}
 
-  }
+.profileimagecontainer{
+  display: flex;
+  flex-direction: row;
   
- 
+  align-items: center;
+}
+
+.boxshowimageOrUPDATE{
+  background-color: #E5C1FF;
+}
