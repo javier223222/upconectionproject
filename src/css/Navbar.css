@@ -1,0 +1,19 @@
+
+
+
+  .fathercontainer{
+    display: flex;
+    background-color: #E5C1FF;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px !important;
+    padding: 5px 5%;
+
+  }
+  .imagenav{
+    width: 34%;
+    
+
+  }
+  
+ 

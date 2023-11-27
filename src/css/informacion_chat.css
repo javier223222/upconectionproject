@@ -1,0 +1,71 @@
+.contenedor-info{
+    width: 25%;
+    height: 87vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+justify-content: center;
+
+}
+
+.perfil_prueba{
+    width: 20%;
+    height: 10vh;
+    margin: 10px;
+}
+
+.info-user{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+
+    flex-direction: column;
+    align-items: center;
+}
+
+.description{
+    text-align: center;
+    width: 90%;
+    height: auto;
+    color: rgba(128, 128, 128, 0.589);
+}
+
+
+.multimedia{
+    width: 95%;
+    height: 8vh;
+    margin-top: 10%;
+    border: none;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.multimedia:hover{
+    background-color: rgba(128, 0, 128, 0.453);
+    color: white;
+}
+.multimedia:hover .icon_multimedia{
+    fill: white;
+}
+.multimedia:active{
+    background-color: rgba(234, 89, 234, 0.453);
+}
+
+.icon_multimedia{
+    height: 8vh;
+    width: 20%;
+}
+
+.info_multimedia{
+    height: 8vh;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+

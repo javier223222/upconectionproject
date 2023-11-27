@@ -5,8 +5,11 @@ import Cuadros from '@/components/Cuadros'
 import Form_login from '@/components/form-login'
 
 import axios from 'axios'
+import { useRouter } from 'next/navigation'
 
 function Login() {
+
+ const navigate=useRouter()
 
   // const {emailousuario,password, onInputChange,onResetForm}=useForm({emailousuario:null,password:null})
   const [elements,setElementes]=useState({emailousuario:null,password:null})
@@ -24,11 +27,13 @@ function Login() {
  
 
 
-  const res=await axios.post("https://connection-back.onrender.com/user/v1/login",{
+  const res=await axios.post("http://localhost:80/user/v1/login",{
       usernameoremail:elements.emailousuario,passworduser:elements.password
     }, { withCredentials: true })
 
-    console.log(res.data)
+    if(res.data.success){
+      navigate.replace("/user")
+    }
    
   }
   return (

@@ -1,0 +1,138 @@
+.amigos{
+    width: 100%;
+    height: 87vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+
+}
+
+.recepcion{
+width: 80%;
+height: 80vh;
+overflow: auto;
+}
+
+.contenedorAmigoC{
+    width: 90%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.NoamigoC {
+    width: 100%;
+    height: 9vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+    position: relative; /* Añadir posición relativa para alinear los botones */
+  }
+  
+  .NoamigoC .opcionTRashC {
+    visibility: hidden; /* Los botones no son visibles por defecto */
+  }
+  
+  .NoamigoC:hover {
+    animation: fadein 2s;
+    border: 0.4px solid rgb(43, 41, 41);
+
+  }
+  
+  .NoamigoC:hover .opcionTRashC {
+    visibility: visible; /* Mostrar los botones cuando se activa el hover */
+  }
+  
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+.imagenWhitnamenC{
+width: 50%;
+height: 9vh;
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+.profileFriendC{
+    width: 20%;
+    height: 7vh;
+    border-radius: 30px;
+    background-color: grey;
+}
+
+.carreraC{
+    width: 30%;
+    height: 9vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  
+}
+
+.DeleteC{
+  width: 100%;
+  height: 5vh;
+  border: none;
+  border-radius: 35px;
+
+
+}
+
+.opcionTRashC{
+    background-color: white;
+    border: none;
+   
+}
+
+.opcionTRashC:hover .DeleteC{
+    filter: brightness(0) saturate(100%) invert(57%) sepia(60%) saturate(2006%) hue-rotate(212deg) brightness(82%) contrast(77%);
+}
+.opcionTRashC:active{
+    transform: scale(0.87);
+}
+.icon-separador{
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@keyframes fadein {
+    0% {
+        opacity:0.4;
+    }
+    50%{
+        opacity:0.7;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+
+a
+{
+    text-decoration: none;
+    outline: none;
+    color: black;
+}
+
+a:hover{
+    border-bottom: 0.5px solid;
+background-color: rgba(241, 179, 241, 0.332)  ;
+}

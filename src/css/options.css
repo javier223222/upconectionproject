@@ -1,0 +1,12 @@
+.contenedor-2{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.footer{
+    background-color: #CCCCCC;
+}
+
