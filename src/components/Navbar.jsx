@@ -21,7 +21,7 @@ const Navbar = (props) => {
         search: value,
       };
     });
-    const res = await axios.get(`http://localhost:80/people?name=${value}`, {
+    const res = await axios.get(`http://18.116.19.145/people?name=${value}`, {
       headers: {
         Authorization: search.token,
       },

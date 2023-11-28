@@ -8,7 +8,7 @@ const ButtonSendFriendRequest = (props) => {
         idrecives:props.idrecives
     })
     const sendFriendRequest=async()=>{
-        const res=await axios.post("http://localhost:80/friends/",{iduserfrie:idfriendship.idrecives},{
+        const res=await axios.post("http://18.116.19.145/friends/",{iduserfrie:idfriendship.idrecives},{
             headers:{
                 Authorization:idfriendship.token
             }

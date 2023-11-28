@@ -57,7 +57,7 @@ const Chatfriends = (props) => {
     }
     formData.append("contentmessage", message.bodyMessage)
     formData.append("idmessgae", message.idChat)
-    const addpost=await axios.post("http://localhost:80/chatInteraction/",formData,{
+    const addpost=await axios.post("http://18.116.19.145/chatInteraction/",formData,{
       headers:{
         Authorization:message.token
       }

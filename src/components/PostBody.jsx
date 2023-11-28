@@ -46,7 +46,7 @@ const Post = ({imageuse,username,contentOfPublication,idpublication,token,tipode
      if(imagePublication.contentMesage==null){
       alert("no se puede agregar un comentario vacio")
      }else{
-      const res=await axios.post("http://localhost:80/publications/addcomment",{
+      const res=await axios.post("http://18.116.19.145/publications/addcomment",{
         idpublicacion:imagePublication.idpublicacion,
         comment:imagePublication.contentMesage
       },{
@@ -78,7 +78,7 @@ const Post = ({imageuse,username,contentOfPublication,idpublication,token,tipode
   }
 
   const getIdUser=async()=>{
-    const res=await getAnyProfile(`http://localhost:80/profile/getIdByToken`,token)
+    const res=await getAnyProfile(`http://18.116.19.145/profile/getIdByToken`,token)
     setImagePublication(x=>{
       return{
         ...x,
@@ -125,7 +125,7 @@ const Post = ({imageuse,username,contentOfPublication,idpublication,token,tipode
 
   }
   const getLikes=async()=>{
-    const res=await getAnyProfile(`http://localhost:80/publications/likesofpublications?idpublicacion=${imagePublication.idpublicacion}`,token)
+    const res=await getAnyProfile(`http://18.116.19.145/publications/likesofpublications?idpublicacion=${imagePublication.idpublicacion}`,token)
     setImagePublication(x=>{
       return{
         ...x,
@@ -136,7 +136,7 @@ const Post = ({imageuse,username,contentOfPublication,idpublication,token,tipode
 
   }
   const addLike=async()=>{
-    const res=await axios.patch("http://localhost:80/publications/addLike",{
+    const res=await axios.patch("http://18.116.19.145/publications/addLike",{
       idpublicacion:imagePublication.idpublicacion
     },{
       headers:{
@@ -153,7 +153,7 @@ const Post = ({imageuse,username,contentOfPublication,idpublication,token,tipode
 
   const getImages=async()=>{
     
-    const res=await getAnyProfile(`http://localhost:80/publications/getmediapublications?idpublicacion=${imagePublication.idpublicacion}`,token)
+    const res=await getAnyProfile(`http://18.116.19.145/publications/getmediapublications?idpublicacion=${imagePublication.idpublicacion}`,token)
     setImagePublication(x=>{
       return {...x,image:res.result.length!=0?res.result[0].urlfile:null}
     

@@ -29,7 +29,7 @@ const Friends = (props) => {
   };
   
   const getRequestFriends=async()=>{
-    const allRequest=await axios.get("http://localhost:80/friends/requesteFriends",{
+    const allRequest=await axios.get("http://18.116.19.145/friends/requesteFriends",{
       headers:{
         Authorization:friendsAndReque.token
       }
@@ -43,7 +43,7 @@ const Friends = (props) => {
 
   }
   const getFriends=async()=>{
-    const allFriends=await axios.get(`http://localhost:80/friends/`,{
+    const allFriends=await axios.get(`http://18.116.19.145/friends/`,{
       headers:{
           Authorization:friendsAndReque.token
       }
@@ -56,7 +56,7 @@ const Friends = (props) => {
   })
   }
   const accePtedFriend=async(id)=>{
-    const allRequest=await axios.patch(`http://localhost:80/friends/`,{
+    const allRequest=await axios.patch(`http://18.116.19.145/friends/`,{
       iduserNeFriend:id
     },{
       headers:{
@@ -67,7 +67,7 @@ const Friends = (props) => {
     getFriends()
   }
   const deleteFriendRequest=async(id)=>{
-    const allRequest=await axios.delete(`http://localhost:80/friends/deleterequest?idusede=${id}`,{
+    const allRequest=await axios.delete(`http://18.116.19.145/friends/deleterequest?idusede=${id}`,{
       headers:{
         Authorization:friendsAndReque.token
       }

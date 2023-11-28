@@ -59,7 +59,7 @@ const ChatContainer = (props) => {
 
     formData.append("contentOfInteraction", messages.bodymessage);
     formData.append("idforo", messages.idforo);
-    const ad=await axios.post("http://localhost:80/foroInteraction/interaction",formData,{
+    const ad=await axios.post("http://18.116.19.145/foroInteraction/interaction",formData,{
       headers:{
         Authorization:messages.token
       }

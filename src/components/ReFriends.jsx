@@ -13,7 +13,7 @@ const ReFriends = (props) => {
   )
   const deleteFriend=async()=>{
 
-  const deletemyRequest=await axios.delete(`http://localhost:80/friends/deleteSendRequest?idrecives=${idfriendship.idfriendship}`,{
+  const deletemyRequest=await axios.delete(`http://18.116.19.145/friends/deleteSendRequest?idrecives=${idfriendship.idfriendship}`,{
     headers:{
         Authorization:idfriendship.token
     }

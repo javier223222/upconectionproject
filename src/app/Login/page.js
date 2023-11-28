@@ -35,6 +35,7 @@ function Login() {
       navigate.replace("/user")
     }
    
+    console.log(res.data)
   }
   return (
     <div>
