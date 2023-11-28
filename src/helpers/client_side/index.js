@@ -6,7 +6,7 @@ import axios from "axios"
 
 export const getProfileClientSide=async (url,headers)=>{
 
-    const res=await axios.get(`http://localhost:80/${url}`,{
+    const res=await axios.get(`http://18.116.19.145/${url}`,{
         headers
     })
     return res.data
@@ -16,7 +16,7 @@ export const getProfileClientSide=async (url,headers)=>{
   
   
  export const updateProfile=async(url,data,headers)=>{
-    const res=await axios.patch(`http://localhost:80/${url}`,data,{
+    const res=await axios.patch(`http://18.116.19.145/${url}`,data,{
         headers
     })
 
@@ -26,7 +26,7 @@ export const getProfileClientSide=async (url,headers)=>{
  } 
 
 export const postProfile=async(url,data,headers)=>{
-    const res=await axios.post(`http://localhost:80/${url}`,data,{
+    const res=await axios.post(`http://18.116.19.145/${url}`,data,{
         headers
     })
 
@@ -34,7 +34,7 @@ export const postProfile=async(url,data,headers)=>{
 }
 
 export const deleteProfile=async(url,headers)=>{
-    const res=await axios.delete(`http://localhost:80/${url}`,{
+    const res=await axios.delete(`http://18.116.19.145/${url}`,{
         headers
     })
 

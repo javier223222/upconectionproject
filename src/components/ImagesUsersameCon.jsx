@@ -69,7 +69,7 @@ const ImagesUsersameCon = props => {
     const gewNewImages=async()=>{
       
       if(images.pagesPivot<images.totalPagesPivot){
-          const getNewImages=await getAnyProfile(`http://localhost:80/profile/getimagesprofile?page=${parseInt(images.pagesPivot+1)}&limit=4&username=${images.username}`,images.token)
+          const getNewImages=await getAnyProfile(`http://18.116.19.145/profile/getimagesprofile?page=${parseInt(images.pagesPivot+1)}&limit=4&username=${images.username}`,images.token)
           setImages(x=>{
             return {
               ...x,

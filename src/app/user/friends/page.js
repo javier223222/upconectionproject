@@ -11,12 +11,12 @@ const getTokenofme=()=>{
   
   }
 const HomeFriends = async () => {
-    const allFriends=await axios.get(`http://localhost:80/friends/`,{
+    const allFriends=await axios.get(`http://18.116.19.145/friends/`,{
         headers:{
             Authorization:getTokenofme()
         }
     })
-    const allRequest=await axios.get("http://localhost:80/friends/requesteFriends",{
+    const allRequest=await axios.get("http://18.116.19.145/friends/requesteFriends",{
       headers:{
         Authorization:getTokenofme()
       }

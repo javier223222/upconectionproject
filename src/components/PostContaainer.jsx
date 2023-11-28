@@ -15,13 +15,13 @@ const PostContainer = ({token,username,allpublication,allapuntes,totalPagesPubl,
   })
   
   const deletePost=async(id)=>{
-    const res=await axios.delete(`http://localhost:80/publications/?idpublicacion=${id}`,{
+    const res=await axios.delete(`http://18.116.19.145/publications/?idpublicacion=${id}`,{
       headers:{
         Authorization:publication.tokenOfmy
       }
     })
     if(!publication.whShow){
-      const res=await getAnyProfile(`http://localhost:80/publications/?type=Publicacion&idcategoria=1&page=1&limit=4`,publication.tokenOfmy)
+      const res=await getAnyProfile(`http://18.116.19.145/publications/?type=Publicacion&idcategoria=1&page=1&limit=4`,publication.tokenOfmy)
       setPublication(x=>{
         return {
           ...x,
@@ -33,7 +33,7 @@ const PostContainer = ({token,username,allpublication,allapuntes,totalPagesPubl,
         }
       })
     }else{
-      const res=await getAnyProfile(`http://localhost:80/publications/?type=Apunte&idcategoria=2&page=1&limit=4`,publication.tokenOfmy)
+      const res=await getAnyProfile(`http://18.116.19.145/publications/?type=Apunte&idcategoria=2&page=1&limit=4`,publication.tokenOfmy)
       setPublication(x=>{
         return {
           ...x,
@@ -51,7 +51,7 @@ const PostContainer = ({token,username,allpublication,allapuntes,totalPagesPubl,
    
     if(!publication.whShow){
       if(publication.pagesPublic<publication.totalPagePublications){
-        const res=await getAnyProfile(`http://localhost:80/publications/?type=Publicacion&idcategoria=1&page=${parseInt(publication.pagesPublic)+1}&limit=4&username=${username}`,publication.tokenOfmy)
+        const res=await getAnyProfile(`http://18.116.19.145/publications/?type=Publicacion&idcategoria=1&page=${parseInt(publication.pagesPublic)+1}&limit=4&username=${username}`,publication.tokenOfmy)
         setPublication(x=>{
           return {
             ...x,
@@ -66,7 +66,7 @@ const PostContainer = ({token,username,allpublication,allapuntes,totalPagesPubl,
       
     }else{
       if(publication.pageApuntes<publication.totalPagesApuntes){
-        const res=await getAnyProfile(`http://localhost:80/publications/?type=Apunte&idcategoria=2&page=${parseInt(publication.pageApuntes)+1}&limit=4&username=${username}`,publication.tokenOfmy)
+        const res=await getAnyProfile(`http://18.116.19.145/publications/?type=Apunte&idcategoria=2&page=${parseInt(publication.pageApuntes)+1}&limit=4&username=${username}`,publication.tokenOfmy)
       
         setPublication(x=>{
           return {

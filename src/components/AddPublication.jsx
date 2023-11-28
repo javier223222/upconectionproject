@@ -38,7 +38,7 @@ const AddPublication = props => {
       
       
         const res = await axios.post(
-          "http://localhost:80/publications/",
+          "http://18.116.19.145/publications/",
           formData,
           {
             headers:{
