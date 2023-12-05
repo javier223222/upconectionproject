@@ -20,7 +20,7 @@ const OtherData = () => {
   return (
     <div className="container">
       <div className="element">
-        <Image src={register} className="registerImg"></Image>
+        <Image alt="sing up img" src={register} className="registerImg"></Image>
       </div>
       <div className="element">
         <RegisterFormDos></RegisterFormDos>

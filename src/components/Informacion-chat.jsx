@@ -10,7 +10,7 @@ import Informacion_chat2 from './Informacion-chatContenido';
 const Informacion = ({onMultimediaClick,name,apellidp,apellidom}) => {
   return (
     <div className='contenedor-info'>
-   <Image className='perfil_prueba' src={Prueba}/>
+   <Image alt='' className='perfil_prueba' src={Prueba}/>
     <div className='info-user'>
      <p>{name} {apellidp} {apellidom}</p>
      <p className='description'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, ipsum eaque, eos vel vitae nostrum, ea sequi doloribus ex praesentium sed ratione quis. Quidem consequatur doloribus labore quae pariatur nam.</p>

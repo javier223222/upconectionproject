@@ -1,56 +1,57 @@
-import React from 'react'
-import "@/css/Navbar.css"
+import React from "react";
+import "@/css/Navbar.css";
 
-import hamburguer from "@/assets/conect.svg"
-import Image from 'next/image'
-import {cookies} from "next/headers"
-import axios from 'axios'
-import ProfileImage from '@/components/ProfileImage'
-import Navbar from '@/components/Navbar'
-import { getProfile } from '@/apiconections'
-const gettoken= ()=>{
-  const cokiestore=cookies()
-  const hasCokokie=cokiestore.has('tokenUser')
+import hamburguer from "@/assets/Connectlogo.svg";
+import Image from "next/image";
+import { cookies } from "next/headers";
+import axios from "axios";
+import ProfileImage from "@/components/ProfileImage";
+import Navbar from "@/components/Navbar";
+import { getProfile } from "@/apiconections";
+const gettoken = () => {
+  const cokiestore = cookies();
+  const hasCokokie = cokiestore.has("tokenUser");
 
-  return hasCokokie?cokiestore.get("tokenUser").value:undefined
-
-  
-}
-const getImageProfile=async()=>{
-  
-  console.log(gettoken())
-  const res=await axios.get(`http://localhost:80/profile/profileimage?type=Profile`,{
-    headers:{
-      "Authorization":gettoken()
+  return hasCokokie ? cokiestore.get("tokenUser").value : undefined;
+};
+const getImageProfile = async () => {
+  console.log(gettoken());
+  const res = await axios.get(
+    `http://18.116.19.145/profile/profileimage?type=Profile`,
+    {
+      headers: {
+        Authorization: gettoken(),
+      },
     }
-  })
-   return res.data
-}
-const getInformation=async()=>{
-  const res=await axios.get(`http://localhost:80/profile/getInformation`,{
-    headers:{
-      Authorization:gettoken()
-    }
-  })
-  return res.data
-}
+  );
+  return res.data;
+};
+const getInformation = async () => {
+  const res = await axios.get(`http://18.116.19.145/profile/getInformation`, {
+    headers: {
+      Authorization: gettoken(),
+    },
+  });
+  return res.data;
+};
 
-const HomeLayaout =async ({children}) => {
-
-   const profileImage=await getImageProfile()
-   const name=await getInformation()
-   console.log(profileImage)
-  console.log(gettoken())
+const HomeLayaout = async ({ children }) => {
+  const profileImage = await getImageProfile();
+  const name = await getInformation();
+  console.log(profileImage);
+  console.log(gettoken());
 
   return (
     <>
-   
-    <Navbar nameofuser={name.username}
-     token={gettoken()} hamburguer={hamburguer} 
-     profileImage={profileImage.urlprofile}></Navbar>
-    {children}
+      <Navbar
+        nameofuser={name.username}
+        token={gettoken()}
+        hamburguer={hamburguer}
+        profileImage={profileImage.urlprofile}
+      ></Navbar>
+      {children}
     </>
-  )
-}
+  );
+};
 
-export default HomeLayaout
+export default HomeLayaout;

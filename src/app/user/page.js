@@ -19,26 +19,26 @@ const HomepageUser = async (props) => {
   let name=null
   let  imageProfiles= []
   let publicationsOFmyFriends=[]
-  const res=await axios.get(`http://localhost:80/profile/profileimage?type=Profile`,{
+  const res=await axios.get(`http://18.116.19.145/profile/profileimage?type=Profile`,{
     headers:{
      Authorization:getTokenofme()
     }
     
   })
   imageProfiles=res.data
-  const restwo=await axios.get('http://localhost:80/profile/profilegetinteresofexpert',{
+  const restwo=await axios.get('http://18.116.19.145/profile/profilegetinteresofexpert',{
     headers:{
       Authorization:getTokenofme()
     }
   }) 
   optionsOfExpeOrIn=restwo.data
 
-  const resThree=await axios.get('http://localhost:80/profile/getInformation',{
+  const resThree=await axios.get('http://18.116.19.145/profile/getInformation',{
     headers:{
       Authorization:getTokenofme()
     }
   })
-  const resFour=await axios.get(`http://localhost:80/publications/friendsPublications?limit=5&page=1`,{
+  const resFour=await axios.get(`http://18.116.19.145/publications/friendsPublications?limit=5&page=1`,{
     headers:{
      Authorization:getTokenofme()
     }

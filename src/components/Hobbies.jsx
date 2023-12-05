@@ -26,7 +26,7 @@ const Hobbies = ({idhobbieof,nameHobbieof,deleteInteres}) => {
 </div>
 
     {
-      interest.showDelete ?<div className='imagecontainer'><Image onClick={async()=>deleteInteres(interest.idhobbie)} src={deleteicon}></Image></div>:<div className='imagecontainer'></div>
+      interest.showDelete ?<div className='imagecontainer'><Image alt='' onClick={async()=>deleteInteres(interest.idhobbie)} src={deleteicon}></Image></div>:<div className='imagecontainer'></div>
     }
     
 </div>

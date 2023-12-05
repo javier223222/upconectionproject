@@ -30,7 +30,7 @@ const ModalPost = props => {
             alert("no se puede agregar un comentario vacio")
         }else{
           
-            const res=await axios.post("http://localhost:80/publications/addcomment",{
+            const res=await axios.post("http://18.116.19.145/publications/addcomment",{
                 idpublicacion:comments.idPublication,
                 comment:comments.message
               },{
@@ -51,7 +51,7 @@ const ModalPost = props => {
     }
 
     const getMessagges=async()=>{
-        const res=await getAnyProfile(`http://localhost:80/publications/comments?idpublicacion=${comments.idPublication}`,comments.token)
+        const res=await getAnyProfile(`http://18.116.19.145/publications/comments?idpublicacion=${comments.idPublication}`,comments.token)
         SetImages(x=>{
             return {
                 ...x,
@@ -128,7 +128,7 @@ const ModalPost = props => {
         >
           {
             comments.allComments.length!=0?comments.allComments.map((x,i)=>{
-              return <div className='contenedor-de-publicaiones-modal'>
+              return <div key={i} className='contenedor-de-publicaiones-modal'>
 
                 <ComentPost created_at={x.created_at} token={comments.token} username={x.username} connent_Of_Comment={x.connent_Of_Comment} />
               </div>

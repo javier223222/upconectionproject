@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const Homepage = props => {
   return (
-    <div>Homepage</div>
+    <div></div>
   )
 }
 

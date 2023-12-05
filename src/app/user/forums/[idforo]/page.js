@@ -19,8 +19,8 @@ const Forums =async (parasms) => {
    
    console.log(parasms)
    const {idforo}=parasms.params
-   const allinteractionforo=await getAnyProfile(`http://localhost:80/foros/interactions?idforo=${idforo} `,getTokenofme())
-   const geinfo=await getAnyProfile(`http://localhost:80/foros/info?idforo=${idforo}`,getTokenofme())
+   const allinteractionforo=await getAnyProfile(`http://18.116.19.145/foros/interactions?idforo=${idforo} `,getTokenofme())
+   const geinfo=await getAnyProfile(`http://18.116.19.145/foros/info?idforo=${idforo}`,getTokenofme())
    console.log(geinfo)
    console.log(allinteractionforo)
 

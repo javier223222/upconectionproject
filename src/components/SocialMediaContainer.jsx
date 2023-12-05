@@ -138,7 +138,7 @@ const SocialMediaContainer = props => {
     <div className='interestOrExperts'>
      
       {
-        socialmedias.socialmedias!=[]?socialmedias.socialmedias.map(x=>{ return  <SocialMedia updateLink={edit} deleteInteres={deleteSocialMedia} idsocialmediatwo={x.idsocialmediofuser} urlSocialMediatwo={x.usrlsocialmedia} nameSocialMedia={x.nameofsocialmedia}></SocialMedia>}):<></>
+        socialmedias.socialmedias!=[]?socialmedias.socialmedias.map((x,i)=>{ return  <SocialMedia key={i} updateLink={edit} deleteInteres={deleteSocialMedia} idsocialmediatwo={x.idsocialmediofuser} urlSocialMediatwo={x.usrlsocialmedia} nameSocialMedia={x.nameofsocialmedia}></SocialMedia>}):<></>
       } 
     
     

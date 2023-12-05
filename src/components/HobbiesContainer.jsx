@@ -6,7 +6,7 @@ import Image from 'next/image'
 const HobbiesContainer = props => {
     
     
-    const hobbies=props.hobbies.map(x=><div onMouseOut={props.changeButtonDelete} onMouseOver={props.changeButtonDelete}  ><p>{x.namehobbie}</p> {props.openDeleteButton? <button name={`${x.idhobbiesof}`} onClick={props.deleteHobbie}>Eliminar</button>:<></>}</div>)
+    const hobbies=props.hobbies.map((x,i)=><div key={i} onMouseOut={props.changeButtonDelete} onMouseOver={props.changeButtonDelete}  ><p>{x.namehobbie}</p> {props.openDeleteButton? <button name={`${x.idhobbiesof}`} onClick={props.deleteHobbie}>Eliminar</button>:<></>}</div>)
     
     
      

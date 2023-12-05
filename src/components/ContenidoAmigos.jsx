@@ -25,7 +25,7 @@ const ContenidoAmigos = ({name,apellidop,apellidom,username,namemajor,urlfile,id
       <div className='amigoA'>
         <div className='imagenWhitnameA'>
           
-          <Image onClick={redirect} className='profileFriendA' width={"80"} height={"80"} src={urlfile?urlfile:accountcircle} />
+          <Image alt='friendProIm' onClick={redirect} className='profileFriendA' width={"80"} height={"80"} src={urlfile?urlfile:accountcircle} />
           
     
           <a   href=''>{name} {apellidop} {apellidom}  </a>
@@ -36,7 +36,7 @@ const ContenidoAmigos = ({name,apellidop,apellidom,username,namemajor,urlfile,id
        
       </div>
       <button className='opcionTRashA'>
-          <Image onClick={async()=>deleteFriend(usernameAndata.idfrienshipNum,usernameAndata.iduserf)}  className='DeleteA' src={Trash} />
+          <Image alt='friendProIm' onClick={async()=>deleteFriend(usernameAndata.idfrienshipNum,usernameAndata.iduserf)}  className='DeleteA' src={Trash} />
         </button>
     </div>
 

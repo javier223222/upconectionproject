@@ -105,7 +105,7 @@ const ContainerExpOrInt = props => {
         <h5 className='boxexpertOrinteresTitle'>{props.interestOrExpert}</h5>
        
         <div className='interestOrExperts'>
-            {interestOrExpert!=[]? interestOrExpert.map(x=>{ return <ExpertOrInterest deleteInterestOrExpert={deleteInterestOrExpert}  idinterestwo={x.idselectexperorinterest} interesttwo={x.namefininteorexpert}></ExpertOrInterest>}):<></>}
+            {interestOrExpert!=[]? interestOrExpert.map((x,i)=>{ return <ExpertOrInterest key={i} deleteInterestOrExpert={deleteInterestOrExpert}  idinterestwo={x.idselectexperorinterest} interesttwo={x.namefininteorexpert}></ExpertOrInterest>}):<></>}
         </div>
         <div className='anadicontainer'>
  

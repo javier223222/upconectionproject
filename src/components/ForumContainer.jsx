@@ -12,7 +12,7 @@ const ForumContainer = (props) => {
  
       <div className="contenedor-foros">
         {
-          props.forosd.map(x=><ForumsChart name={x.nameforo} idforo={x.idforo}></ForumsChart>)
+          props.forosd.map((x,i)=><ForumsChart key={i}  name={x.nameforo} idforo={x.idforo}></ForumsChart>)
         }
        
 

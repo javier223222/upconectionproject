@@ -33,7 +33,7 @@ const DescriptionProfile = props => {
   }
   return (
     <div className='descriptionProfile' >
-        <Image onClick={props.updatePort}  src={props.portImage} width={"800"} height={"200"} ></Image>
+        <Image alt='profileImg' onClick={props.updatePort}  src={props.portImage} width={"800"} height={"200"} ></Image>
         <PerfilImage onClick={props.selectOption} urlimage={props.urlimage}></PerfilImage>
         <div>
            <h1>{props.username?props.username:''}</h1>
@@ -43,15 +43,15 @@ const DescriptionProfile = props => {
             props.showupd?<div><input type='number' name='editsemester' defaultValue={props.semesteredit}
              onChange={props.inputadd} placeholder='Ingrese el semestre'></input> <button onClick={props.updateAddSemester}>actualizar</button> <button onClick={props.closesemester}>cancelar</button></div>:<p>{props.semester}</p>
            }  {
-            props.edit&&!props.showupd?<Image onClick={props.updatesemester} src={edit}></Image>:''
+            props.edit&&!props.showupd?<Image alt='updatesemester' onClick={props.updatesemester} src={edit}></Image>:''
            } </div>
            
                      
         
           <div>
-            {props.username?<>{props.editnametwo?<></>:<span  onMouseOut={props.showIconName} onMouseOver={props.showIconName} >{props.name} {props.nameshoweditdc?<Image onClick={props.showInputNam}   src={edit}></Image>:''}  </span>}
-                           {props.editapellidoPtwo?<></>:<span   onMouseOut={props.showIconApeA} onMouseOver={props.showIconApeA} >{props.apelldiop} {props.apellidopshowedittwo?<Image id='editapellidoP' src={edit} onClick={props.showInputApeP}   ></Image>:''}  </span>}
-                           {props.editApellidoMtwo?<></> : <span  onMouseOut={props.showIconApeM} onMouseOver={props.showIconApeM}  >{props.apellidoM} {props.apellidomeditwo?<Image id='editApellidoM' onClick={props.showInputApelliM}   src={edit}></Image>:''} </span>}</>:''}
+            {props.username?<>{props.editnametwo?<></>:<span  onMouseOut={props.showIconName} onMouseOver={props.showIconName} >{props.name} {props.nameshoweditdc?<Image  alt='' onClick={props.showInputNam}   src={edit}></Image>:''}  </span>}
+                           {props.editapellidoPtwo?<></>:<span   onMouseOut={props.showIconApeA} onMouseOver={props.showIconApeA} >{props.apelldiop} {props.apellidopshowedittwo?<Image alt='' id='editapellidoP' src={edit} onClick={props.showInputApeP}   ></Image>:''}  </span>}
+                           {props.editApellidoMtwo?<></> : <span  onMouseOut={props.showIconApeM} onMouseOver={props.showIconApeM}  >{props.apellidoM} {props.apellidomeditwo?<Image alt='' id='editApellidoM' onClick={props.showInputApelliM}   src={edit}></Image>:''} </span>}</>:''}
              <>
                {props.editnametwo?<div>
                 <input type='text'

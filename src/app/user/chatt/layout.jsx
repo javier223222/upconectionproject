@@ -13,7 +13,7 @@ const getTokenMy=()=>{
 
 const HomeChat =async ({children}) => {
 
-    const allMessagesContainer=await getAnyProfile("http://localhost:80/chat",getTokenMy())
+    const allMessagesContainer=await getAnyProfile("http://18.116.19.145/chat",getTokenMy())
     console.log(allMessagesContainer)
  
   

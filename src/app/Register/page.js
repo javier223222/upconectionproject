@@ -31,7 +31,7 @@ const Registro = () => {
      alert("Hay campos vacios")
   }
   else{
-   axios.post(`http://localhost:80/api/v1/user`,{
+   axios.post(`http://18.116.19.145/api/v1/user`,{
     username:forms.username,nombre:forms.nombre,apellidop:forms.apellidop,apellidom:forms.apellidom,
     correo:forms.email,fechanacimiento:new Date(forms.birthday),sexo:forms.sex,password:forms.password,
     namemajor:forms.Carrera

@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Friends from "@/assets/Friends.svg";
 import Add from "@/assets/Fiends-add.svg";
 
-const opciones_friends = ({ toggleContenidoAmigos, toggleContenidoSolicitudes }) => {
+const OpcionesFriendsE = ({ toggleContenidoAmigos, toggleContenidoSolicitudes }) => {
 
   const [selectedOption, setSelectedOption] = useState('amigos'); // Estado para seguir qué opción está seleccionada
 
@@ -63,4 +63,4 @@ const opciones_friends = ({ toggleContenidoAmigos, toggleContenidoSolicitudes })
   )
 }
 
-export default opciones_friends;
+export default OpcionesFriendsE;

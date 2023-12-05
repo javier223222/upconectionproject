@@ -65,12 +65,12 @@ const ContenedorChat = ({ onChatClick,allMembersch }) => {
   
         {
           busquedaActiva.allmembers.length!=0&& busquedaActiva.search==''?busquedaActiva.allmembers.map((x,i)=>{
-            return <Chat_Preview image={x.imageuser} nombre={x.name} apellido={x.apellidop} apellidom={x.apellidom} username={x.username} idchat={x.idmessage} ></Chat_Preview>
+            return <Chat_Preview key={i} image={x.imageuser} nombre={x.name} apellido={x.apellidop} apellidom={x.apellidom} username={x.username} idchat={x.idmessage} ></Chat_Preview>
           }):<></>
         }
         {
           busquedaActiva.findedElent.length!=0&& busquedaActiva.search!=''?busquedaActiva.findedElent.map(x=>{
-           return <Chat_Preview image={x.imageuser} nombre={x.name} apellido={x.apellidop} apellidom={x.apellidom} username={x.username} idchat={x.idmessage} ></Chat_Preview>
+           return <Chat_Preview key={i} image={x.imageuser} nombre={x.name} apellido={x.apellidop} apellidom={x.apellidom} username={x.username} idchat={x.idmessage} ></Chat_Preview>
           }):<></>
         }
 

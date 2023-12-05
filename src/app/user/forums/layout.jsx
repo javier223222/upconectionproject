@@ -15,7 +15,7 @@ const getTokenofme=()=>{
 const HomeForum = async({children}) => {
     
   
-    const getforos=await getAnyProfile(`http://localhost:80/foros/`,getTokenofme())
+    const getforos=await getAnyProfile(`http://18.116.19.145/foros/`,getTokenofme())
     console.log(getforos)
  
   

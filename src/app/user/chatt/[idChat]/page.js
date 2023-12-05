@@ -27,7 +27,7 @@ const Chatts = async (props) => {
   const {idChat}=props.params
   
  
-   const getConversations=await getAnyProfile(`http://localhost:80/chat/messages?idmessage=${idChat}`,getTokenMy())
+   const getConversations=await getAnyProfile(`http://18.116.19.145/chat/messages?idmessage=${idChat}`,getTokenMy())
   console.log(getConversations)
  
  

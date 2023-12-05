@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import Friend from './Friend'
 
-const FriendContainer =async (props) => {
+const FriendContainer = (props) => {
   const [friends,setFrieds]=useState({})
   useEffect(()=>{
     setFrieds(
@@ -14,7 +14,7 @@ const FriendContainer =async (props) => {
     setFrieds(x=>{
       return {
         ...x,
-        informationFriend:x.result.map(y=><Friend name={y.name} apellidp={y.apellidop} apellidom={y.apellidom} username={y.username} imgaeFriend={y.urlfile}></Friend>)
+        informationFriend:x.result.map((y,z)=><Friend key={z} name={y.name} apellidp={y.apellidop} apellidom={y.apellidom} username={y.username} imgaeFriend={y.urlfile}></Friend>)
       }
     })
     

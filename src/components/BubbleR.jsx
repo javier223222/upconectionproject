@@ -5,7 +5,7 @@ import profile from "@/assets/profile.jpg"
 const BubbleR = (props) =>{
     return(
         <div className="bubble-right">
-            <Image  src={profile} className="foto"/> 
+            <Image alt="bubble-image"  src={profile} className="foto"/> 
         </div>
     )
 }

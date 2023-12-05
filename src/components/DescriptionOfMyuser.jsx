@@ -111,7 +111,7 @@ const Description = props => {
     <p>{description.description==null?'no profile description':description.description}</p>
     {
 
-      description.editDescription?<div className='imageEditDescription'><Image src={editImage} onClick={swhoEditBox} ></Image></div>:<div className='imageEditDescription'></div>
+      description.editDescription?<div className='imageEditDescription'><Image alt='imagebox' src={editImage} onClick={swhoEditBox} ></Image></div>:<div className='imageEditDescription'></div>
     }
     </div>
   

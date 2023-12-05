@@ -10,7 +10,7 @@ import Informacion_chat2 from './Informacion-chatContenido';
 const Info = ({onMultimediaClick}) => {
   return (
     <div className='contenedor-info'>
-   <Image className='perfil_prueba' src={Prueba}/>
+   <Image alt='' className='perfil_prueba' src={Prueba}/>
     <div className='info-user'>
      <p>Nombre del foro</p>
      <p className='description'>descriocion del foro</p>

@@ -24,7 +24,7 @@ const ExpertOrInterest = ({idinterestwo,interesttwo,deleteInterestOrExpert}) => 
 </div>
 
         {
-          interest.showDelete ?<div className='imagecontainer'><Image onClick={async()=>deleteInterestOrExpert(interest.idinterest)} src={deleteicon}></Image></div>:<div className='imagecontainer'></div>
+          interest.showDelete ?<div className='imagecontainer'><Image alt='delete' onClick={async()=>deleteInterestOrExpert(interest.idinterest)} src={deleteicon}></Image></div>:<div className='imagecontainer'></div>
         }
         
     </div>

@@ -59,7 +59,7 @@ const ChatContainer = (props) => {
 
     formData.append("contentOfInteraction", messages.bodymessage);
     formData.append("idforo", messages.idforo);
-    const ad=await axios.post("http://localhost:80/foroInteraction/interaction",formData,{
+    const ad=await axios.post("http://18.116.19.145/foroInteraction/interaction",formData,{
       headers:{
         Authorization:messages.token
       }
@@ -80,8 +80,8 @@ const ChatContainer = (props) => {
   return (
     <div className="ChatContainer">
       {
-        messages.totalMessage.map(x=> 
-        { return <div className="message-container">
+        messages.totalMessage.map((x,i)=> 
+        { return <div key={i} className="message-container">
         <div className="left">
           <BubbleL username={x.username} media={x.urlfile !=null?x.urlfile:null}  image={x.imagenuser!=null?x.imagenuser:null}  content={x.bodyofpublication}/>
           
@@ -95,11 +95,11 @@ const ChatContainer = (props) => {
         <input onChange={onInputFileChange} type="file" name="document" id="addar" style={{ width: "0.1px",
 }}></input>
         <label htmlFor="addar" className="boton">
-          <Image src={clip}></Image>
+          <Image alt="imgAdd" src={clip}></Image>
         </label>
         <input onChange={onInputChange}  name="bodymessage" placeholder="Envía un mensaje....." className="mensajes"></input>
         <button onClick={add} className="boton">
-          <Image src={send}></Image>
+          <Image alt="img-add" src={send}></Image>
         </button>
       </div>
     </div>

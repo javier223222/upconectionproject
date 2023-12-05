@@ -27,7 +27,7 @@ function Login() {
  
 
 
-  const res=await axios.post("http://localhost:80/user/v1/login",{
+  const res=await axios.post("http://18.116.19.145/user/v1/login",{
       usernameoremail:elements.emailousuario,passworduser:elements.password
     }, { withCredentials: true })
 
@@ -35,6 +35,7 @@ function Login() {
       navigate.replace("/user")
     }
    
+    console.log(res.data)
   }
   return (
     <div>
