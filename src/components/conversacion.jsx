@@ -3,7 +3,7 @@
 import React from "react";
 import "@/css/conversacion.css";
 import Image from "next/image";
-import Picture from "@/assets/r.gif";
+import Picture from "@/assets/R.gif";
 import Archivos from "./Archivos";
 import { useState } from "react";
 

@@ -4,7 +4,7 @@ import Image from "next/image";
 import "@/css/account.css";
 import SignIn from "@/assets/Girl-Sign-in.svg";
 import Contenido from "@/components/Contenido";
-import perfil from "@/assets/About-us.svg"
+import perfil from "@/assets/aboutUs.svg"
  const Perfil =(titulo, descripcion)=> {
   return (
     <div>

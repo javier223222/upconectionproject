@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React, { useRef } from "react";
 import Conversation from "./Conversation";
-import "@/css/ChatForos.css";
+// import "@/css/ChatForos.css";
 import NavForo from "./NavForo";
 
 const ChatForos = (props) => {
