@@ -1,5 +1,5 @@
 import React from "react";
-import "@/css/Options.css";
+import "@/css/options.css";
 import Cards from "./Cards";
 import Image from "next/image";
 import account from "@/assets/User-Account-Sign-up.svg";
