@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import '@/css/infoForos2.css';
-import MultimediaForos from '@/components/Multimediaforos';
+import MultimediaForos from "./MultimediaForos";
 import Archive from './Archive';
 
 
