@@ -14,7 +14,7 @@ const Amigos = ({ mostrarContenidoAmigos, mostrarContenidoSolicitudes,friends,fr
   })
   
   const deleteFriend=async(idfriendship,iduserdelete)=>{
-  const res=await axios.delete(`http://localhost:80/friends/?idfrienship=${idfriendship}&idfriendtodelete=${iduserdelete}`,{
+  const res=await axios.delete(`http://18.116.19.145/friends/?idfrienship=${idfriendship}&idfriendtodelete=${iduserdelete}`,{
   headers:{
     Authorization:friendAnrequest.token
   }
@@ -27,7 +27,7 @@ const Amigos = ({ mostrarContenidoAmigos, mostrarContenidoSolicitudes,friends,fr
 
 
   const getfriends=async()=>{
-    const res=await axios.get("http://localhost:80/friends/",{
+    const res=await axios.get("http://18.116.19.145/friends/",{
       headers:{
         Authorization:friendAnrequest.token
       }
@@ -44,14 +44,14 @@ const Amigos = ({ mostrarContenidoAmigos, mostrarContenidoSolicitudes,friends,fr
     <div className='amigos'>
       <div className='recepcion'>
         {mostrarContenidoAmigos &&
-          friendAnrequest.friendssw.length!=0 ? friendAnrequest.friendssw.map(x=>{
-             return <ContenidoAmigos iduser={x.idfriendone||x.idfriendtwo} idfrienship={x.idfriendship} deleteFriend={deleteFriend} name={x.name} 
+          friendAnrequest.friendssw.length!=0 ? friendAnrequest.friendssw.map((x,i)=>{
+             return <ContenidoAmigos key={i} iduser={x.idfriendone||x.idfriendtwo} idfrienship={x.idfriendship} deleteFriend={deleteFriend} name={x.name} 
              apellidop={x.apellidop} urlfile={x.urlfile} username={x.username} namemajor={x.namemajor} apellidom={x.apellidom} ></ContenidoAmigos>
           }):<></>   }
         {mostrarContenidoSolicitudes &&
          
-         friendAnrequest.friendRequestsw.length!=0? friendAnrequest.friendRequestsw.map(x=>{
-          return <NoAmigos apellidop={x.apellidop} 
+         friendAnrequest.friendRequestsw.length!=0? friendAnrequest.friendRequestsw.map((x,i)=>{
+          return <NoAmigos key={i} apellidop={x.apellidop} 
           apellidom={x.apellidom} 
            namemajor={x.namemajor}
            iduser={x.idSender}

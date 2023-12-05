@@ -175,7 +175,7 @@ const PostContainer = ({token,username,allpublication,allapuntes,totalPagesPubl,
       
       {
         publication.allPublications.length!=0?publication.allPublications.map((x,i)=>{
-          return <Post deletePubli={deletePost} admin={admin}  idpublication={x.idpublicacion} 
+          return <Post key={i} deletePubli={deletePost} admin={admin}  idpublication={x.idpublicacion} 
            contentOfPublication={x.cuerpodelapublicacion} tipodecategorios={x.tipoDecategoria} nameexpertoOrExpert={x.namefininteorexpert}  token={publication.tokenOfmy} imageuse={imagende} username={publication.usernameoFmy} ></Post>
         }):<></>
       }
@@ -188,7 +188,7 @@ const PostContainer = ({token,username,allpublication,allapuntes,totalPagesPubl,
       
       {
         publication.allApuntes.length!=0?publication.allApuntes.map((x,i)=>{
-          return <Post deletePubli={deletePost} admin={admin} idpublication={x.idpublicacion} tipodecategorios={x.tipoDecategoria}  nameexpertoOrExpert={x.namefininteorexpert} token={publication.tokenOfmy} contentOfPublication={x.cuerpodelapublicacion} imageuse={imagende} username={publication.usernameoFmy} ></Post>
+          return <Post key={i} deletePubli={deletePost} admin={admin} idpublication={x.idpublicacion} tipodecategorios={x.tipoDecategoria}  nameexpertoOrExpert={x.namefininteorexpert} token={publication.tokenOfmy} contentOfPublication={x.cuerpodelapublicacion} imageuse={imagende} username={publication.usernameoFmy} ></Post>
         }):<></>
       }
       </>:<></>

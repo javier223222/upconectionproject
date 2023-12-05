@@ -67,8 +67,8 @@ const ModalSwoMore = props => {
               alignItems="center"
               spacing={0.2}  >
                 {
-                props.allImages.length!=0?props.allImages.map(x=>{
-                  return <Grid gap={"0.4rem"} item xl={6} justifyContent={"center"} container     >
+                props.allImages.length!=0?props.allImages.map((x,i)=>{
+                  return <Grid key={i} gap={"0.4rem"} item xl={6} justifyContent={"center"} container     >
                      <Image  className='bordeim' onClick={()=>redirect(x.username)} src={x.urlfile!=null?x.urlfile:acountCircle} width={"80"} height={"80"}></Image>
             <Grid  >
             <h3 onClick={()=>redirect(x.username)}>{x.username}</h3>
@@ -95,8 +95,8 @@ const ModalSwoMore = props => {
               justifyContent="center"
               alignItems="center"
               spacing={0.2}>{
-                props.allImages.length!=0?props.allImages.map(x=>{
-                  return <Grid gap={"0.6rem"} item xl={6} justifyContent={"center"} container     >
+                props.allImages.length!=0?props.allImages.map((x,i)=>{
+                  return <Grid key={i}  gap={"0.6rem"} item xl={6} justifyContent={"center"} container     >
                      <Image  className='bordeim' onClick={()=>redirect(x.username)} src={x.urlfile!=null?x.urlfile:acountCircle} width={"80"} height={"80"}></Image>
             <Grid  >
             <h3 onClick={()=>redirect(x.username)}>{x.username}</h3>

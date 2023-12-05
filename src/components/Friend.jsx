@@ -16,7 +16,7 @@ const Friend = (props) => {
   return (
     <div className='friend' >
         <div onClick={redirect}>
-            <Image src={props.imgaeFriend==null?acountCircle:props.imgaeFriend}  width={"80"} height={"80"}></Image>
+            <Image alt='' src={props.imgaeFriend==null?acountCircle:props.imgaeFriend}  width={"80"} height={"80"}></Image>
         </div>
         <div>
             <div onClick={redirect}><h3 >{props.username}</h3></div>

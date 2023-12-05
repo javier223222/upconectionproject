@@ -128,7 +128,7 @@ const ModalPost = props => {
         >
           {
             comments.allComments.length!=0?comments.allComments.map((x,i)=>{
-              return <div className='contenedor-de-publicaiones-modal'>
+              return <div key={i} className='contenedor-de-publicaiones-modal'>
 
                 <ComentPost created_at={x.created_at} token={comments.token} username={x.username} connent_Of_Comment={x.connent_Of_Comment} />
               </div>

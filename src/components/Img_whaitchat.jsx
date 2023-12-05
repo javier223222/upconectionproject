@@ -6,7 +6,7 @@ import "@/css/chatfriends.css"
 const Img_whaitchat = () => {
   return (
     <div className="containerImg-chat">
-    <Image className='wait' src={picture}></Image>
+    <Image alt='' className='wait' src={picture}></Image>
     </div>
   )
 }

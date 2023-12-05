@@ -17,7 +17,7 @@ const gettoken = () => {
 const getImageProfile = async () => {
   console.log(gettoken());
   const res = await axios.get(
-    `http://localhost:80/profile/profileimage?type=Profile`,
+    `http://18.116.19.145/profile/profileimage?type=Profile`,
     {
       headers: {
         Authorization: gettoken(),
@@ -27,7 +27,7 @@ const getImageProfile = async () => {
   return res.data;
 };
 const getInformation = async () => {
-  const res = await axios.get(`http://localhost:80/profile/getInformation`, {
+  const res = await axios.get(`http://18.116.19.145/profile/getInformation`, {
     headers: {
       Authorization: gettoken(),
     },

@@ -19,7 +19,7 @@ const Conversation = (props) => {
   return (
     <>
       <div className="alineameesta">
-        <Image onClick={toggleLightbox} className="profile" src={Picture} />
+        <Image alt="imageprofile" onClick={toggleLightbox} className="profile" src={Picture} />
 
         <div className="contenedor-de-chats">
           <p>
@@ -30,7 +30,7 @@ const Conversation = (props) => {
           </p>
           {imageSrc && paragraphText && (
             <div className="contendor-document">
-              <Image className="image-receptor" src={Picture} />
+              <Image alt="imageprofile" className="image-receptor" src={Picture} />
 
               <div className="archivo2">
                 <div className="archivo-icon2">
@@ -67,7 +67,7 @@ const Conversation = (props) => {
 
       {lightboxOpen && (
         <div className="lightbox">
-          <Image className="lightbox-image" src={Picture} />
+          <Image alt="profile" className="lightbox-image" src={Picture} />
 
           <nav>
             <button onClick={toggleLightbox}>

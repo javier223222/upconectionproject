@@ -5,7 +5,7 @@ const ModalExpOrInt = props => {
     const [elemestSelect,setElementSelect]=useState([])
    
     useEffect(()=>{
-       setElementSelect(props.elemestSelect.map(x=><option value={x.idineterestorexpert}>{x.namefininteorexpert}</option>))
+       setElementSelect(props.elemestSelect.map((x,i)=><option key={i} value={x.idineterestorexpert}>{x.namefininteorexpert}</option>))
        console.log(props.elemestSelect)
     },[])
   return (

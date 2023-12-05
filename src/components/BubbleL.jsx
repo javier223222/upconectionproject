@@ -14,7 +14,7 @@ const BubbleL = (props) =>{
     return(
         <div >
             <div className="display">
-            <Image onClick={redirectProfile}  src={props.image!=null?props.image:imageProfileSho} width={"80"} height={"80"} className="foto"/> 
+            <Image alt="Preview of image" onClick={redirectProfile}  src={props.image!=null?props.image:imageProfileSho} width={"80"} height={"80"} className="foto"/> 
             <p>{props.username}</p>
             </div>
             <div className="contenido">

@@ -23,8 +23,8 @@ const ModalAddInterestOrExpert = props => {
                 <Grid   item xs={12}>
                     <Grid   container justifyContent={"center"}  spacing={1}>
                         <select  className='inputname notonline' name='optionsSelect' onChange={props.onInputChange} >
-                           {props.options.map(x=>{
-                             return <option value={x.idineterestorexpert} >{x.namefininteorexpert}</option>
+                           {props.options.map((x,i)=>{
+                             return <option key={i} value={x.idineterestorexpert} >{x.namefininteorexpert}</option>
                            })}
 
                         </select>

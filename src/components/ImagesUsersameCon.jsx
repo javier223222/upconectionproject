@@ -173,8 +173,8 @@ const ImagesUsersameCon = props => {
         <Grid  container direction={"row"} item justifyContent="center"
     alignItems="center" gap={"1.4rem"}  >
             {
-              images.allImages.map((x,i)=>{return <Grid spacing={1}
-               item xs={3}><Image onClick={()=>openAndsave(i,x.urlfile)}
+              images.allImages.map((x,i)=>{return <Grid key={i} spacing={1}
+               item xs={3}><Image alt='' onClick={()=>openAndsave(i,x.urlfile)}
                  key={i} src={x.urlfile} width={"101"} height={"103"}></Image></Grid>})
             }  
         </Grid>

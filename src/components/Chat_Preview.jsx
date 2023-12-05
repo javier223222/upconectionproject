@@ -18,7 +18,7 @@ const Chat_Preview = ({ onChatClick ,username,image,idchat,nombre,apellido,apell
   return (
     <button  className="chat-preview" onClick={redirect}>
       <div className="user-chat">
-        <Image className="image-user-chat" width={"80"} height={"80"} src={image?image:accountcircle} />
+        <Image alt="profileImg" className="image-user-chat" width={"80"} height={"80"} src={image?image:accountcircle} />
       </div>
       <div className="name">
         <h4>{username}</h4>

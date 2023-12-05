@@ -7,7 +7,7 @@ const ImagenNotPipul = () => {
   return (
     <div>
         <div className='centrar'>
-        <Image className='imagenpipul' src={Img}/>
+        <Image alt='' className='imagenpipul' src={Img}/>
         </div>
    
 

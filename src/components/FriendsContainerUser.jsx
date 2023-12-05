@@ -91,9 +91,10 @@ const FriendsContainerUser = (props) => {
       alignItems="center"
     >
       {friends.allfriend.length != 0 ? (
-        friends.allfriend.map((x) => {
+        friends.allfriend.map((x,i) => {
           return (
             <Grid
+            key={i}
             className="amigoscontainer"
               spacing={0.4}
               xl={12}
@@ -105,7 +106,7 @@ const FriendsContainerUser = (props) => {
               justifyContent="center"
               alignItems="center"
             >
-              <Image
+              <Image alt=""
                 className="bordeim"
                 onClick={() => redirect(x.username)}
                 src={x.urlfile != null ? x.urlfile : acountCircle}

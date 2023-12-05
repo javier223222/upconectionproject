@@ -20,7 +20,7 @@ const Conversacion = (props) => {
   return (
     <>
       <div className="alineameesta">
-        <Image width={"80"} height={"80"} onClick={toggleLightbox} className="profile" src={props.imagen!=null||props.imagen!=undefined?props.imagen:Picture} />
+        <Image alt="profileImage" width={"80"} height={"80"} onClick={toggleLightbox} className="profile" src={props.imagen!=null||props.imagen!=undefined?props.imagen:Picture} />
 
         <div className="contenedor-de-chats">
                 <p>
@@ -30,7 +30,7 @@ const Conversacion = (props) => {
                 </p>
                 {
                   props.imageSrc!=null||props.imageSrc!=undefined ?
-                  /^.*\.(doc|DOC|pdf|PDF)$/.test(props.imageSrc) ? <iframe src={props.imageSrc}></iframe>:<Image width={"100"} height={"100"} src={props.imageSrc} ></Image> :<></>
+                  /^.*\.(doc|DOC|pdf|PDF)$/.test(props.imageSrc) ? <iframe src={props.imageSrc}></iframe>:<Image alt="previweImg" width={"100"} height={"100"} src={props.imageSrc} ></Image> :<></>
                 }
             
           <footer>{props.name} {props.apellidop} {props.apellidom}</footer>
@@ -40,7 +40,7 @@ const Conversacion = (props) => {
       {lightboxOpen && (
         <div className='lightbox'>
               
-          <Image width={"80"} height={"80"} className='lightbox-image' src={props.imagen!=null||props.imagen!=undefined?props.imagen:Picture} />
+          <Image alt="" width={"80"} height={"80"} className='lightbox-image' src={props.imagen!=null||props.imagen!=undefined?props.imagen:Picture} />
         
     
 

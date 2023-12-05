@@ -128,7 +128,7 @@ direction="row"
 justifyContent="space-evenly"
 alignItems="flex-start" gap={"0.7rem"} marginBottom={"0.2rem"} spacing={0.5}>
    {
-        props.socialmedia.length!=0 ? props.socialmedia.map((x,i)=>{return <SocialMedia urlSocialMediatwo={x.usrlsocialmedia} onlyshows={true} nameSocialMedia={x.nameofsocialmedia}></SocialMedia>}):<Grid item></Grid>
+        props.socialmedia.length!=0 ? props.socialmedia.map((x,i)=>{return <SocialMedia key={i} urlSocialMediatwo={x.usrlsocialmedia} onlyshows={true} nameSocialMedia={x.nameofsocialmedia}></SocialMedia>}):<Grid item></Grid>
 
 }
   

@@ -12,7 +12,7 @@ const ComentPost = (props) => {
        getImages()
     },[])
     const getImages=async()=>{
-        const res=await getAnyProfile(`http://localhost:80/profile/profileimage?type=Profile&username=${data.username}`,data.token)
+        const res=await getAnyProfile(`http://18.116.19.145/profile/profileimage?type=Profile&username=${data.username}`,data.token)
         setData(x=>{
             return {
                 ...x,
@@ -33,7 +33,7 @@ const ComentPost = (props) => {
               
               ><div className='alinear-imagen-whit-coments'>
                 
-                <Image onClick={()=>{navigation.push(`http://localhost:3000/user/${props.username}`)}} width={"60"} height={"60"} src={data.userImage!=null?data.userImage:acountCircle}></Image>
+                <Image alt='profileCommentImg' onClick={()=>{navigation.push(`http://localhost:3000/user/${props.username}`)}} width={"60"} height={"60"} src={data.userImage!=null?data.userImage:acountCircle}></Image>
                 <div className='contenedor-de-publicaiones-modal'>
                 <div className='alinear-objetos'>
                 <h4 onClick={()=>{navigation.push(`http://localhost:3000/user/${props.username}`)}} className='comentario-modal'> {props.username}</h4>

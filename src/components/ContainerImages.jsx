@@ -10,7 +10,7 @@ const ContainerImages = (props) => {
   return (
     <div className='imagesContainer'>
      <div className='allImages'>
-        {media.images!=[]?media.images.map(x=>{return <ImagesPr image={x.urlfile}></ImagesPr>}):<></>}
+        {media.images!=[]?media.images.map((x,i)=>{return <ImagesPr key={i} image={x.urlfile}></ImagesPr>}):<></>}
      </div>
      {
         media.currentPage<media.totalpages?<button className='showfriends'>Ver mas</button>:<></>

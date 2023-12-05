@@ -5,7 +5,7 @@ const FriendItem = (props) => {
   return (
     <div>
         <div className='fp' >
-            <Image className='fpi' src={props.imageFriend?props.imageFriend:menu}></Image>
+            <Image alt='' className='fpi' src={props.imageFriend?props.imageFriend:menu}></Image>
             <p>{props.namefriend}</p>
             
         

@@ -16,7 +16,7 @@ const PostOfMyFriendsContainer = ({allPublicationOfMyfriend,page,tokenU}) => {
      {
         allPublicationOfMyfriend.length!=0?
         allPublicationOfMyfriend.map((x,i)=>{
-            return  <Post idpublication={x.idpublicacion} 
+            return  <Post key={i} idpublication={x.idpublicacion} 
             contentOfPublication={x.cuerpodelapublicacion} tipodecategorios={x.tipoDecategoria} nameexpertoOrExpert={x.namefininteorexpert}  token={allPublicationOfMyfrineds.token} imageuse={x.imageuser} username={x.username}></Post>
             
         }):<></>

@@ -80,7 +80,7 @@ const ContainerHobbies = props => {
         <div className='interestOrExperts'>
         
           {
-            interestOrExpert.hobbies!=[]?interestOrExpert.hobbies.map(x=>{ return  <Hobbies  deleteInteres={deleteHobbie} idhobbieof={x.idhobbiesof} 
+            interestOrExpert.hobbies!=[]?interestOrExpert.hobbies.map((x,i)=>{ return  <Hobbies key={i}  deleteInteres={deleteHobbie} idhobbieof={x.idhobbiesof} 
               nameHobbieof={x.namehobbie} ></Hobbies>}):<></>
           }
 
