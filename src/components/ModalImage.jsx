@@ -8,12 +8,12 @@ const ModalImage = props => {
     <div className='darkBGtwo'  />
 
     <div className='centered' >
-    <Image src={close} onClick={props.closeImage} ></Image>
+    <Image alt='' src={close} onClick={props.closeImage} ></Image>
       <div className='modalthree '  >
     
        
         <div className='modalContent'>
-        <Image src={props.img} width={"500"} height={"300"}></Image>
+        <Image alt='' src={props.img} width={"500"} height={"300"}></Image>
         </div>
       </div>
     </div>

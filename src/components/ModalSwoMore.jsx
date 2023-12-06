@@ -24,7 +24,7 @@ const ModalSwoMore = props => {
   justifyContent="flex-end"
   alignItems="flex-start">
             
-            <Grid item  ><Image onClick={props.close} style={{cursor:"pointer"}} src={close}></Image> </Grid> 
+            <Grid item  ><Image alt='' onClick={props.close} style={{cursor:"pointer"}} src={close}></Image> </Grid> 
           
            
            
@@ -69,7 +69,7 @@ const ModalSwoMore = props => {
                 {
                 props.allImages.length!=0?props.allImages.map((x,i)=>{
                   return <Grid key={i} gap={"0.4rem"} item xl={6} justifyContent={"center"} container     >
-                     <Image  className='bordeim' onClick={()=>redirect(x.username)} src={x.urlfile!=null?x.urlfile:acountCircle} width={"80"} height={"80"}></Image>
+                     <Image alt=''  className='bordeim' onClick={()=>redirect(x.username)} src={x.urlfile!=null?x.urlfile:acountCircle} width={"80"} height={"80"}></Image>
             <Grid  >
             <h3 onClick={()=>redirect(x.username)}>{x.username}</h3>
             <p onClick={()=>redirect(x.username)}>{`${x.name} ${x.apellidop} ${x.apellidom}`}</p>
@@ -97,7 +97,7 @@ const ModalSwoMore = props => {
               spacing={0.2}>{
                 props.allImages.length!=0?props.allImages.map((x,i)=>{
                   return <Grid key={i}  gap={"0.6rem"} item xl={6} justifyContent={"center"} container     >
-                     <Image  className='bordeim' onClick={()=>redirect(x.username)} src={x.urlfile!=null?x.urlfile:acountCircle} width={"80"} height={"80"}></Image>
+                     <Image alt=''  className='bordeim' onClick={()=>redirect(x.username)} src={x.urlfile!=null?x.urlfile:acountCircle} width={"80"} height={"80"}></Image>
             <Grid  >
             <h3 onClick={()=>redirect(x.username)}>{x.username}</h3>
             <p onClick={()=>redirect(x.username)}>{`${x.name} ${x.apellidop} ${x.apellidom}`}</p>

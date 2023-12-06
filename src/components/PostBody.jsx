@@ -182,7 +182,7 @@ const Post = ({imageuse,username,contentOfPublication,idpublication,token,tipode
   direction="row"
   justifyContent="flex-start"
   alignItems="flex-start"  >
-          <Image onClick={()=>openIntab()}  style={{borderRadius:"50px"}} width={"60"} height={"60"} src={imageuse!=null||imageuse!=undefined?imageuse:acountCircle}></Image>
+          <Image alt='' onClick={()=>openIntab()}  style={{borderRadius:"50px"}} width={"60"} height={"60"} src={imageuse!=null||imageuse!=undefined?imageuse:acountCircle}></Image>
           <h4 onClick={()=>openIntab()} > {username}</h4>
           <Grid item  
            container 
@@ -203,10 +203,10 @@ const Post = ({imageuse,username,contentOfPublication,idpublication,token,tipode
           
         >
          {
-          imagePublication.admine?imagePublication.showDelete?<Image onClick={async()=>deletePubli(imagePublication.idpublicacion)}  src={deleteImg} ></Image>:<></>:<></>
+          imagePublication.admine?imagePublication.showDelete?<Image alt='' onClick={async()=>deletePubli(imagePublication.idpublicacion)}  src={deleteImg} ></Image>:<></>:<></>
          } 
      
-      <Image   src={likeImg} onClick={async()=>addLike()}></Image>
+      <Image alt=''   src={likeImg} onClick={async()=>addLike()}></Image>
         
         
         
@@ -232,7 +232,7 @@ const Post = ({imageuse,username,contentOfPublication,idpublication,token,tipode
             imagePublication.image!=null ? 
             /^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w].*))(.doc|.DOC|.pdf|.PDF)$/.test(imagePublication.image) ?<iframe onClick={()=>openIntab()}  src={imagePublication.image} width="400" height="400"></iframe>
             :
-            <Image onClick={()=>openIntab()}  width={"400"} height={"400"} src={imagePublication.image}></Image>:<></>
+            <Image alt='' onClick={()=>openIntab()}  width={"400"} height={"400"} src={imagePublication.image}></Image>:<></>
           }
         </Grid>
         <Grid item container>

@@ -24,7 +24,7 @@ const ModalShowAddImage = props => {
                         {
                              props.nameOFEditfEdit==null? <label htmlFor='addimage'>
                              <span>Añadir</span>
-                           </label>:<label htmlFor='addimage'><Image  src={props.imageToShow} className={props.type?'imageShowtwo':'profile'} width={"400"} height={"250"}></Image></label>
+                           </label>:<label htmlFor='addimage'><Image alt='' src={props.imageToShow} className={props.type?'imageShowtwo':'profile'} width={"400"} height={"250"}></Image></label>
                         }
                         <input variant="standard" 
                          placeholder={props.placeholder}

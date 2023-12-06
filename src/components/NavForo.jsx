@@ -7,7 +7,7 @@ const NavForo = () => {
   return (
     <nav className="navfriends">
       <div className="contenedorImgAndTxt">
-        <Image className="usuarionav" src={Persona} />
+        <Image alt="" className="usuarionav" src={Persona} />
         <div className="centered">
           <p>Nombre del foro</p>
         </div>

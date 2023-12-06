@@ -15,7 +15,7 @@ const Multimedia = () => {
   
   return (
     <>
-    <Image className='multi' src={Persona} onClick={toggleLightbox} />
+    <Image alt='' className='multi' src={Persona} onClick={toggleLightbox} />
 
               
       {lightboxOpen && (
@@ -24,7 +24,7 @@ const Multimedia = () => {
           <button>
           <svg className='arrows'  xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/></svg>
 </button>          
-          <Image className='lightbox-image' src={Persona} />
+          <Image alt='' className='lightbox-image' src={Persona} />
         
           <button>
           <svg className='arrows'  xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>

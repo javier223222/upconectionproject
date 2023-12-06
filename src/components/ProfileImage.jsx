@@ -38,7 +38,7 @@ const ProfileImage = (props) => {
   const navigation = useRouter();
   const openAndCloseOptions = () => {
     openOptions();
-    navigation.push("http://localhost:3000/user/chatt");
+    navigation.push("http://3.21.236.240:3000/user/chatt");
   };
 
   const openOptions = () => {
@@ -89,12 +89,12 @@ const ProfileImage = (props) => {
     });
   };
   const openEditAndclose = () => {
-    navigation.push("http://localhost:3000/user/friends");
+    navigation.push("http://3.21.236.240:3000/user/friends");
     openOptions();
   };
   const showProfile = () => {
     openOptions();
-    navigation.push("http://localhost:3000/user/profile");
+    navigation.push("http://3.21.236.240:3000/user/profile");
   };
   const onInputChange = (e) => {
     const { name, files } = e.target;
@@ -108,7 +108,7 @@ const ProfileImage = (props) => {
   };
   const shwoforos = () => {
     openOptions();
-    navigation.push("http://localhost:3000/user/forums");
+    navigation.push("http://3.21.236.240:3000/user/forums");
   };
   return (
     <>
@@ -148,11 +148,11 @@ const ProfileImage = (props) => {
         >
           <Grid container xs direction={"column"} spacing={2}>
             <Grid item container>
-              <Image src={accountbox} onClick={openModalShowImage}></Image>
+              <Image alt="" src={accountbox} onClick={openModalShowImage}></Image>
               <p onClick={openModalShowImage}>Ver foto de portada</p>
             </Grid>
             <Grid item>
-              <Image src={uploaad} onClick={openEditImage}></Image>
+              <Image alt="" src={uploaad} onClick={openEditImage}></Image>
               <p onClick={openEditImage}>Cambiar foto de portada</p>
             </Grid>
           </Grid>

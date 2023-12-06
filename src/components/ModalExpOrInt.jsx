@@ -13,7 +13,7 @@ const ModalExpOrInt = props => {
     <div className='darkBGtwo'  />
 
     <div className='centered' >
-    <Image src={close} onClick={props.closeImage} ></Image>
+    <Image alt='' src={close} onClick={props.closeImage} ></Image>
     <div className='modalthree '  >
     <div>
         <div><span>Agregar {props.nameExpOrInt} en</span></div>

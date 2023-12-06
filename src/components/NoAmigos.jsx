@@ -18,7 +18,7 @@ const NoAmigos = ({name,apellidop,apellidom,username,namemajor,urlfile,idfriensh
   })
 
   const redirect = () => {
-    navigation.push(`http://localhost:3000/user/${usernameAndata.usernamet}`)
+    navigation.push(`http://3.21.236.240:3000/user/${usernameAndata.usernamet}`)
   }
 
   return (
@@ -28,7 +28,7 @@ const NoAmigos = ({name,apellidop,apellidom,username,namemajor,urlfile,idfriensh
           <div className='NoamigoC'>
             <div className='imagenWhitnameA'> 
             
-            <Image onClick={redirect} className='profileFriendA' width={"80"} height={"80"} src={urlfile?urlfile:accountcircle} />
+            <Image alt='' onClick={redirect} className='profileFriendA' width={"80"} height={"80"} src={urlfile?urlfile:accountcircle} />
               <a   href=''>{name} {apellidop} {apellidom}</a>
        
             </div>
@@ -37,10 +37,10 @@ const NoAmigos = ({name,apellidop,apellidom,username,namemajor,urlfile,idfriensh
             </div>
             <div className='icon-separador'>
               <button onClick={async()=>aceptRequest(usernameAndata.iduserf)} className='opcionTRashC'>
-                <Image className='DeleteC' src={Yes} />
+                <Image alt='' className='DeleteC' src={Yes} />
               </button>
               <button onClick={async()=>deletFriendRequest(usernameAndata.iduserf)} className='opcionTRashC'>
-                <Image className='DeleteC' src={Close} />
+                <Image alt='' className='DeleteC' src={Close} />
               </button>
             </div>
           </div>

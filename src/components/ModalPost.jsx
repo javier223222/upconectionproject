@@ -78,8 +78,8 @@ const ModalPost = props => {
                 justifyContent="flex-start"
                 alignItems="flex-start"
                 >
-                       <Image onClick={()=>{navigation.push(`http://localhost:3000/user/${props.username}`)}} style={{borderRadius:"50px"}} width={"60"} height={"60"} src={props.imageuse!=null||props.imageuse!=undefined?props.imageuse:acountCircle}></Image>
-          <h4 onClick={()=>{navigation.push(`http://localhost:3000/user/${props.username}`)}} > {props.username}</h4>
+                       <Image alt='' onClick={()=>{navigation.push(`http://3.21.236.240:3000/user/${props.username}`)}} style={{borderRadius:"50px"}} width={"60"} height={"60"} src={props.imageuse!=null||props.imageuse!=undefined?props.imageuse:acountCircle}></Image>
+          <h4 onClick={()=>{navigation.push(`http://3.21.236.240:3000/user/${props.username}`)}} > {props.username}</h4>
           <Grid item  
            container 
            direction={"row"}
@@ -109,7 +109,7 @@ const ModalPost = props => {
             props.imagePublication!=null ? 
             /^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w].*))(.doc|.DOC|.pdf|.PDF)$/.test(props.imagePublication) ?<iframe src={props.imagePublication} width="400" height="400"></iframe>
             :
-            <Image width={"400"} height={"400"} src={props.imagePublication}></Image>:<></>
+            <Image alt='' width={"400"} height={"400"} src={props.imagePublication}></Image>:<></>
           }
         </Grid>
         <Grid

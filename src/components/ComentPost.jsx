@@ -33,10 +33,10 @@ const ComentPost = (props) => {
               
               ><div className='alinear-imagen-whit-coments'>
                 
-                <Image alt='profileCommentImg' onClick={()=>{navigation.push(`http://localhost:3000/user/${props.username}`)}} width={"60"} height={"60"} src={data.userImage!=null?data.userImage:acountCircle}></Image>
+                <Image alt='profileCommentImg' onClick={()=>{navigation.push(`http://3.21.236.240:3000/user/${props.username}`)}} width={"60"} height={"60"} src={data.userImage!=null?data.userImage:acountCircle}></Image>
                 <div className='contenedor-de-publicaiones-modal'>
                 <div className='alinear-objetos'>
-                <h4 onClick={()=>{navigation.push(`http://localhost:3000/user/${props.username}`)}} className='comentario-modal'> {props.username}</h4>
+                <h4 onClick={()=>{navigation.push(`http://3.21.236.240:3000/user/${props.username}`)}} className='comentario-modal'> {props.username}</h4>
                 <p className='comentario-modal'> {props.connent_Of_Comment}</p>
                
                 </div>

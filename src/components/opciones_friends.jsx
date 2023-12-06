@@ -43,7 +43,7 @@ const OpcionesFriendsE = ({ toggleContenidoAmigos, toggleContenidoSolicitudes })
             Amigos
           </div>
           <div className='icon-friend'>
-            <Image className='iconsfriends' src={Friends} />
+            <Image alt='' className='iconsfriends' src={Friends} />
           </div>
         </button>
         <button
@@ -55,7 +55,7 @@ const OpcionesFriendsE = ({ toggleContenidoAmigos, toggleContenidoSolicitudes })
           </div>
 
           <div className='icon-friend'>
-            <Image src={Add} />
+            <Image alt='' src={Add} />
           </div>
         </button>
       </div>

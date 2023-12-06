@@ -15,7 +15,7 @@ const MultimediaForos = () => {
 
   return (
     <>
-      <Image className="multi" src={Persona} onClick={toggleLightbox} />
+      <Image alt="" className="multi" src={Persona} onClick={toggleLightbox} />
 
       {lightboxOpen && (
         <div className="lightbox">
@@ -30,7 +30,7 @@ const MultimediaForos = () => {
               <path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z" />
             </svg>
           </button>
-          <Image className="lightbox-image" src={Persona} />
+          <Image alt="" className="lightbox-image" src={Persona} />
 
           <button>
             <svg

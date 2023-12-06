@@ -18,7 +18,7 @@ const ModalShowUseUser = ({imageOFshow,shwomodal,closeAll,currentpage,nextImg,be
   height={"100%"}
   alignItems="center">
     {
-     currentpage==0?<></>:<Grid item><Image onClick={beforeImg} src={arrowPrev}></Image></Grid>
+     currentpage==0?<></>:<Grid item><Image alt='' onClick={beforeImg} src={arrowPrev}></Image></Grid>
     }
         
         </Grid>
@@ -27,12 +27,12 @@ const ModalShowUseUser = ({imageOFshow,shwomodal,closeAll,currentpage,nextImg,be
   justifyContent="flex-end"
   height={"100%"} 
   alignItems="end">
-        <Grid item><Image  onClick={nextImg} src={arrowNext}></Image></Grid>
+        <Grid item><Image alt='' onClick={nextImg} src={arrowNext}></Image></Grid>
         </Grid>
 
         </Grid>
       
-        <Image src={imageOFshow}  className='imagetoshowd' width={"600"} height={"400"} style={{...style}}>
+        <Image src={imageOFshow} alt='' className='imagetoshowd' width={"600"} height={"400"} style={{...style}}>
 
         </Image>
     

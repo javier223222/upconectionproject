@@ -14,7 +14,7 @@ const ModalContinue = props => {
         <div>
             <div>
                 <span>Descartar cambios</span>
-                <Image src={close} onClick={props.closedd}></Image>
+                <Image alt='' src={close} onClick={props.closedd}></Image>
             </div>
             <div></div>
             <div>

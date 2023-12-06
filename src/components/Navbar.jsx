@@ -35,7 +35,7 @@ const Navbar = (props) => {
     });
   };
   const redirectan = (username) => {
-    navigation.push(`http://localhost:3000/user/${username}`);
+    navigation.push(`http://3.21.236.240:3000/user/${username}`);
     setSearch((x) => {
       return {
         ...x,
@@ -49,7 +49,7 @@ const Navbar = (props) => {
       <div className="hamburguer">
         <Image
           onClick={() => {
-            navigation.push("http://localhost:3000/user");
+            navigation.push("http://3.21.236.240:3000/user");
           }}
           src={props.hamburguer}
           className="imagenav"

@@ -29,6 +29,7 @@ const ModalAddPublications = (props) => {
           >
             <Grid xs={6} item className="prueba">
               <Image
+                alt="i"
                 className="icon"
                 src={
                   props.imageuse != null || props.imageuse != undefined
@@ -116,6 +117,7 @@ const ModalAddPublications = (props) => {
                   <iframe src={URL.createObjectURL(props.file)}></iframe>
                 ) : (
                   <Image
+                  alt=""
                     width={"300"}
                     height={"150"}
                     src={URL.createObjectURL(props.file)}
@@ -156,7 +158,7 @@ const ModalAddPublications = (props) => {
               }}
             ></input>
             <label htmlFor="file-upload" className="custom-file-upload">
-              <Image src={clip} width={"40"} height={"40"}></Image>
+              <Image alt="" src={clip} width={"40"} height={"40"}></Image>
             </label>
           </Grid>
         </Box>

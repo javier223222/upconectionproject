@@ -25,7 +25,7 @@ const ModalShowMoreImgOFUser = ({nextImages,images,getMoreImages,close,openwin,o
                  alignItems="flex-start">
                     {
                         images.map((x,i)=>{
-                            return <Grid key={i}  xs={3}  item><Image onClick={()=>onlyviewOne(i)} width={"80"} height={"80"} src={x.urlfile}></Image></Grid>
+                            return <Grid key={i}  xs={3}  item><Image alt='' onClick={()=>onlyviewOne(i)} width={"80"} height={"80"} src={x.urlfile}></Image></Grid>
                         })
                     }
                     

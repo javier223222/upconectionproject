@@ -10,7 +10,7 @@ const NavFriend = (props) => {
    <nav className="navfriends">
     <div className="contenedorImgAndTxt">
       {
-        props.image=="null"?<Image className="usuarionav" width={"80"} height={"80"} src={Persona}/>: <Image className="usuarionav" width={"80"} height={"80"} src={props.image}/>
+        props.image=="null"?<Image alt="" className="usuarionav" width={"80"} height={"80"} src={Persona}/>: <Image className="usuarionav" width={"80"} height={"80"} src={props.image}/>
       }
    
 <div className="centered">

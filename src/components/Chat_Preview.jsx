@@ -12,7 +12,7 @@ const Chat_Preview = ({ onChatClick ,username,image,idchat,nombre,apellido,apell
   const [name,setName]=useState(username)
   const navigation=useRouter()
   const redirect=()=>{
-   navigation.push(`http://localhost:3000/user/chatt/${idpublication}?name=${nombre}&apellidp=${apellido}&apellidom=${apellidom}&image=${image}`)
+   navigation.push(`http://3.21.236.240:3000/user/chatt/${idpublication}?name=${nombre}&apellidp=${apellido}&apellidom=${apellidom}&image=${image}`)
   }
 
   return (

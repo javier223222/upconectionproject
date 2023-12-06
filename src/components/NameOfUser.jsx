@@ -18,7 +18,7 @@ const NameOfUser = props => {
          
           
                 {
-                     edit ?<div className='imageditnames'> <Image id={props.idselect} onClick={props.showModal} src={editimage}></Image></div>:<div className='imageditnames'></div>
+                     edit ?<div className='imageditnames'> <Image alt='' id={props.idselect} onClick={props.showModal} src={editimage}></Image></div>:<div className='imageditnames'></div>
                 }
                 
                

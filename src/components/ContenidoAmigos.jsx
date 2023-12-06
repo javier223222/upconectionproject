@@ -16,7 +16,7 @@ const ContenidoAmigos = ({name,apellidop,apellidom,username,namemajor,urlfile,id
 
 
   const redirect = () => {
-    navigatio.push(`http://localhost:3000/user/${usernameAndata.usernamet}`)
+    navigatio.push(`http://3.21.236.240:3000/user/${usernameAndata.usernamet}`)
 
   }
   return (

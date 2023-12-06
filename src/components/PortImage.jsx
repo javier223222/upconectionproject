@@ -115,11 +115,11 @@ const PortImage = (props) => {
       >
         <Grid container xs direction={"column"} spacing={2}>
             <Grid item container> 
-            <Image src={accountbox} onClick={openModalShowImage} ></Image>
+            <Image alt='' src={accountbox} onClick={openModalShowImage} ></Image>
             <p onClick={openModalShowImage}>Ver foto de portada</p>
             </Grid>
             <Grid item>
-                <Image src={uploaad} onClick={openEditImage}></Image>
+                <Image alt='' src={uploaad} onClick={openEditImage}></Image>
                 <p onClick={openEditImage}>Cambiar foto de portada</p>
             </Grid>
         </Grid>

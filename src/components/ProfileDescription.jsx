@@ -17,7 +17,7 @@ const ProfileDescription = props => {
         {props.profileDescription!=[]?props.profileDescription:'no description'} 
         </span>
         {props.editimagede? 
-        <Image onClick={props.evChangeBox} src={edit} ></Image> :<></>}
+        <Image alt='' onClick={props.evChangeBox} src={edit} ></Image> :<></>}
         </div>
     }
     
